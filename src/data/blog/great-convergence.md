@@ -2,7 +2,7 @@
 title: The Great Convergence
 author: Anonymous
 pubDatetime: 2025-01-11T10:33:00Z
-featured: true
+featured: false
 draft: false
 ogImage: "@/assets/images/the-great-convergence.jpeg"
 tags:

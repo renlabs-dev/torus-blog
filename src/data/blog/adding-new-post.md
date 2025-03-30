@@ -1,5 +1,5 @@
 ---
-author: Sat Naing
+author: Anonymous
 pubDatetime: 2022-09-23T15:22:00Z
 modDatetime: 2025-03-20T03:22:19.075Z
 title: Adding new post
@@ -14,12 +14,7 @@ description: Some rules & recommendations for creating or adding new blog posts.
 
 Here are some rules/recommendations, tips & ticks for creating new posts.
 
-<figure>
-  <img
-    src="/public/og-image.jpg"
-    alt="Torus Files"
-  />
-</figure>
+![torus-blog](@/assets/images/example.jpg)
 
 ## Table of contents
 
