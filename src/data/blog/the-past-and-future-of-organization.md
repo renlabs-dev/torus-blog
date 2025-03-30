@@ -14,7 +14,7 @@ tags:
 description: "An exploration of organizational structures, from traditional hierarchies to emerging decentralized models, and the potential of heterarchies."
 ---
 
-> There is a very similar pattern that you find in the structure of societies, in the structure of companies, and in the structure of computers, and all three are moving in the same direction, that is, away from a top‐down structure of a central command system, giving the system instructions on how to behave, towards a system that is parallel, that is flat, which is a web, in which change moves from the bottom up. this is going to happen across all institutions and technical devices, it's the way they work.
+> There is a very similar pattern that you find in the structure of societies, in the structure of companies, and in the structure of computers, and all three are moving in the same direction, that is, away from a top‐down structure of a central command system, giving the system instructions on how to behave, towards a system that is parallel, that is flat, which is a web, in which change moves from the bottom up. this is going to happen across all institutions and technical devices, it's the way they work. - Nick Land, 1994
 
 Personally, I think this quote is prophetic and deeply believe in its accuracy. Actually, I'm betting most of my time and money on this being the case.
 
