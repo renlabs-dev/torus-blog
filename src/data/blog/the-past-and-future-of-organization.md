@@ -14,7 +14,7 @@ tags:
 description: "An exploration of organizational structures, from traditional hierarchies to emerging decentralized models, and the potential of heterarchies."
 ---
 
-> There is a very similar pattern that you find in the structure of societies, in the structure of companies, and in the structure of computers, and all three are moving in the same direction, that is, away from a top‐down structure of a central command system, giving the system instructions on how to behave, towards a system that is parallel, that is flat, which is a web, in which change moves from the bottom up. this is going to happen across all institutions and technical devices, it's the way they work. ‐ Nick Land, 1994
+> There is a very similar pattern that you find in the structure of societies, in the structure of companies, and in the structure of computers, and all three are moving in the same direction, that is, away from a top‐down structure of a central command system, giving the system instructions on how to behave, towards a system that is parallel, that is flat, which is a web, in which change moves from the bottom up. this is going to happen across all institutions and technical devices, it's the way they work.
 
 Personally, I think this quote is prophetic and deeply believe in its accuracy. Actually, I'm betting most of my time and money on this being the case.
 
@@ -34,7 +34,7 @@ Yet, if you think about it, the corporate hierarchy as a organizational pattern 
 
 We believe that the major inefficiencies, the roots of its criticisms, stem more from the way its expressed (through bureaucracy) than the pattern itself.
 
-## The Strength of Hierarchies
+## The winner of evolution
 
 What's its great strength? Well, it is a powerful and scalable mechanism for cohesive alignment and specialization. This alignment is so strong, that it solves the problem of the commons locally within the structure, enforcing communal sharing among lower-levels is in the self-interest of each higher-level. This aspect is worth a separate blog post.
 
@@ -82,7 +82,7 @@ This shape has deep resemblance to the dynamic structuring of the human brain, w
 
 Our thesis is that as a organizational pattern it will come to dominate the 21st century, surpassing both traditional hierarchies as well as flat networks in their simplest form.
 
-## Torus: A Synthesis of Organizational Patterns
+## Torus: a Power Up For Evolution's Winner
 
 Torus is a hyper-long on this thesis. What happens if we synthesize the winning organizational pattern of history with a parallel, web-like bottom up structure, allowing it to finally work freely without the limitations of traditional bureaucracy and integrate it with a Bitcoin-inspired economic model?
 
