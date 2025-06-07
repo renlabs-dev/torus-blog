@@ -11,114 +11,80 @@ tags:
   - Torus
   - Polymarket
   - Swarm Intelligence
-description: "An introduction to the Torus prediction swarm and its mission to identify who can predict the future, and when to listen to them."
+description: "Dive into the Torus prediction swarm and the opportunity at hand."
 ---
 
 ![trust-the-swarm](@/assets/images/trust-the-swarm.jpeg)
 
-# Torus Prediction Swarm: Predicting the Predictors
+Given yesterday's big news of Polymarket integrating with X, it's a good moment to give more focus to the coming Torus prediction swarm and explaining the opportunity of it.
 
-With yesterday's big news of Polymarket integrating with X, it's a good moment to shine a light on the Torus prediction swarm and explain the opportunity it represents.
+#### Intro
 
-## Intro
+In Torus, swarms self-assemble around goals, so it is this goal that agents will develop specialized capabilities for. So what is the initial goal of the prediction swarm?
 
-In Torus, swarms self-assemble around goals. These goals are what agents develop specialized capabilities for. So what is the initial goal of the prediction swarm?
+The goal is to predict who can predict the future.
+In other words, knowing when to pay attention to whom.
 
-**The goal is to predict who can predict the future.**
-In other words, to know when to pay attention to whom.
+How can you predict who is a good predictor for a given topic?
 
-### How Can You Predict Who Is a Good Predictor?
+You can look at everything someone has predicted in the past and verify if it has turned out to be true or false. Very straightforward, very powerful.
 
-You can look at everything someone has predicted in the past and verify whether it turned out to be true or false. Very straightforward, very powerful.
+This method can be applied to explicit predictions, like saying "Trump admin will release the Epstein Client list within 48 hours" or implicit predictions like "I'm feeling super optimistic about Bitcoin right now".
 
-This method applies to both:
+For example, if someone has made 17 predictions on the topic of US politics in the past and 15 of them have been provably correct, then we should give much more weight to his opinion on politics than someone who has made 6 predictions on this topic and 4 of them turned out to be wrong.
 
-* **Explicit predictions**: e.g. “Trump admin will release the Epstein Client list within 48 hours”
-* **Implicit predictions**: e.g. “I'm feeling super optimistic about Bitcoin right now”
+#### How is this valuable?
 
-For example:
-If someone has made 17 predictions on U.S. politics and 15 were provably correct, their opinion should carry more weight than someone who made 6 predictions with 4 of them wrong.
+This can be applied to all fields that humans are making predictions on, including the crypto & stock market. Imagine knowing exactly the success rate of the calls of an account within the different market niches. For instance, someone might be very reliable for sol shitter calls but horrible at eth utility. All that data is out there waiting to be extracted and integrated. Of course it's also massively useful for Polymarket.
 
-## Why Is This Valuable?
+There is an abundance of business-specific / field-specific cases where it is useful to know how much weight to give to different predictions on a subject, especially in times of volatility and change.
 
-This applies to all fields where humans make predictions—including crypto and stock markets. Imagine knowing the exact success rate of an account’s calls across market niches. Someone might be spot-on with Solana shitcoin calls but consistently wrong on Ethereum utility plays.
+For example think about the following flow. You wonder about what will happen with a topic X. You pass the question to the swarm.
 
-All that data is out there—ready to be extracted, verified, and integrated. It's also incredibly useful for platforms like Polymarket.
+* the swarm finds all predictions made on topic X
+* for each predictor, finds all their past predictions
+* verify each prediction to see how accurate they've been in the past
+* calculate a metric for each predictor showing how trustworthy they are on the topic X
+* clearly know which of the predictions are signal, and which are noise
 
-In business and field-specific cases, especially during times of volatility, **knowing whose predictions to trust is a massive advantage**.
+A lot of value in the world comes down to knowing when to listen to whom on what. Knowing the difference between signal and noise.
 
-### Imagine This Flow:
+Quite frankly, the amount of extractable data value scattered over social media in the form of by-now matured predictions is insane. It can be aggregated, processed, and integrated to calculate precisely how reliable someone is on any given topic. Giving us hard data on whose predictions to trust at any given moment. The value of this is obvious and vast.
 
-1. You wonder about topic X.
-2. You ask the swarm.
-3. The swarm finds all predictions made on topic X.
-4. It checks each predictor’s historical accuracy.
-5. It calculates a trust metric for each predictor on topic X.
-6. You now know which predictions are signal and which are noise.
+#### How is Torus useful in this case?
 
-A lot of value in the world comes down to **knowing when to listen to whom on what**.
+The idea is simple, but executing it at scale is hard. It's a large problem domain with a complex tree of sub-domains (each also having sub-domains etc.) that has to be discovered and optimized over time.
 
-## The Insane Opportunity of Social Prediction Data
+For instance, the sub-domain of prediction verification is quite complex with a lot of hidden nuances and will require many groups of specialized agents cooperating to become fully accurate. It is a perfect fit for a decentralized swarm to form around to continuously optimize while exploring as a collective. The aligned decentralized swarm beats any centralized attempt at this over time.
 
-Social media holds vast, mature prediction data that can be:
+Torus allows agents to specialize at any level of granularity, while remaining aligned with the whole. It forms a cohesive organizational and economic structure where the whole is more capable than the sum of its parts.
 
-* Aggregated
-* Processed
-* Scored for reliability on any given topic
+There is open market competition around every small function that exists within the swarm. Improving the function leads to the overall swarm functioning better. The competition is inherently directed towards being positive sum for the whole.
 
-This gives us **hard data** on who to trust in real time.
+#### Why choose the goal of prediction?
 
-## How Is Torus Useful Here?
+First of all, we have strong conviction that there is a significant opportunity here that someone could create an independent successful startup around. And also, that we can beat virtually any centralized startup with a Torus-based decentralized swarm, because at scale it is a fundamentally superior form of operating. Also, we're ourselves very interested in using the products that can be created using the swarm as the backend.
 
-The idea is simple. Executing at scale is hard.
+Second of all, Torus operates as one unified hypergraph, one super-swarm. All of the capabilities that the prediction swarm develops will be available as modular parts for future swarms to build on, instead of rebuilding them from scratch.
 
-Prediction verification is nuanced. It requires many specialized agents working together—perfect for a **decentralized swarm** to self-organize around and continuously optimize.
+The goal of predicting the future comes down to information gathering and processing. The agent capabilities that will emerge from this goal are very general and will be broadly applicable towards many future swarms making their formation quicker and easier.
 
-Torus enables agents to specialize at any level, while staying aligned with the whole. It forms a decentralized structure where **the whole becomes more capable than the sum of its parts**.
+#### What is the core component of the swarm from which all starts?
 
-There's **open competition** at every function level. Improving any one function benefits the whole swarm—a **positive-sum game**.
+The swarm's memory. It's a shared structured database that stores all the information of the swarm and enables agents to cooperate over it. It's where all the predictions, the profiles, the metrics etc. are stored and utilized by the specializing agents to fulfill their roles.
 
-## Why Choose Prediction as the Goal?
+The other crucial element is the swarm's API, which is built to be general and can be reused for future swarms. It's what agents use to interface with the memory and among one another.
 
-1. **Huge opportunity**: A powerful startup could be built solely around this. But a Torus-based swarm can outperform any centralized startup at scale.
-2. **Utility for future swarms**: Torus operates as one super-swarm. Everything the prediction swarm develops can be reused as modular infrastructure for future swarms.
+The memory and the API are the 2 offchain ingredients required to kick off the decentralized formation and optimization process of the swarm.
 
-At its core, prediction is about **information gathering and processing**. Capabilities from this goal are general and widely applicable.
+#### Is there a deeper meaning?
 
-## The Core Component: Swarm Memory
+Making predictions and listening to other people's predictions is a fundamental mechanism for society. And today, no system exists that holds people accountable for bad predictions or tells the masses who is actually reliable beyond an "expert" status.
 
-The swarm's **memory** is a structured shared database:
+People have gotten used to just throwing predictions out there without being held accountable when they've turned out to be dead wrong. Also, people who are actually good at predicting the future but have no followers might not think it's worth it. If there were a proper mechanism to "price in" their past predictions into their present reputation it would fix a major incentive issue underpinning social media.
 
-* Stores all predictions, profiles, metrics
-* Enables agents to cooperate over shared context
+#### What's next?
 
-The **swarm API** is the second critical piece:
+Right after the Torus v0.5 is on mainnet (soon™) the memory and API for the prediction swarm will be deployed into the wild, and the first agents will start to integrate. Their capabilities initially will be sufficient to find and verify predictions, and tell if someone is reliable but the accuracy will likely be bad in many cases and tooling will lack. This though, should change quickly as problem niches are identified and agents start to specialize composing together towards higher-level competence.
 
-* General-purpose
-* Reusable
-* Powers agent coordination
-
-Together, memory + API are the **off-chain core infrastructure** for decentralized swarm formation and optimization.
-
-## A Deeper Meaning
-
-Prediction is a core social function.
-Yet no system today holds people accountable for failed predictions or highlights truly reliable voices beyond superficial "expert" labels.
-
-* **No accountability**: People throw out predictions without consequences.
-* **Wasted talent**: Skilled but unknown predictors get ignored due to low visibility.
-
-Fixing this with **reputation backed by verified prediction history** could realign incentives across social platforms.
-
-## What’s Next?
-
-As soon as **Torus v0.5** hits mainnet (soon™), the **memory and API for the prediction swarm** will be released.
-
-The first agents will integrate:
-
-* Early abilities: find, verify predictions, assess trustworthiness.
-* Initially rough, but fast improvement as agents specialize and niches are mapped.
-
-Once effective, tools will be built on top of the swarm to allow it to interact on X (Twitter) with full predictive knowledge.
-
-There’s also a **surprise** coming to boost the swarm further—stay tuned.
+As soon as the swarm is effective and reliable, we or other builders will start to create tools on top of the swarms and agents that allow it to talk on X with all its knowledge. There is also a surprise that will be revealed later that will help the swarm.
