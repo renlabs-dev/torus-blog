@@ -4,7 +4,7 @@ author: Anonymous
 pubDatetime: 2025-06-07T10:00:00Z
 featured: false
 draft: false
-ogImage: "@/assets/images/predicting-the-predictors.jpeg"
+ogImage: "@/assets/images/trust-the-swarm.jpg"
 tags:
   - Prediction Markets
   - Decentralization
@@ -14,7 +14,7 @@ tags:
 description: "Dive into the Torus prediction swarm and the opportunity at hand."
 ---
 
-![trust-the-swarm](@/assets/images/trust-the-swarm.jpeg)
+![trust-the-swarm](@/assets/images/trust-the-swarm.jpg)
 
 Given friday's big news of Polymarket integrating with X, it's a good moment to give more focus to the coming Torus prediction swarm and explaining the opportunity at hand.
 
@@ -41,11 +41,11 @@ There is an abundance of business-specific / field-specific cases where it is us
 
 For example think about the following flow. You wonder about what will happen with a topic X. You pass the question to the swarm.
 
-* the swarm finds all predictions made on topic X
-* for each predictor, finds all their past predictions
-* verify each prediction to see how accurate they've been in the past
-* calculate a metric for each predictor showing how trustworthy they are on the topic X
-* clearly know which of the predictions are signal, and which are noise
+- the swarm finds all predictions made on topic X
+- for each predictor, finds all their past predictions
+- verify each prediction to see how accurate they've been in the past
+- calculate a metric for each predictor showing how trustworthy they are on the topic X
+- clearly know which of the predictions are signal, and which are noise
 
 A lot of value in the world comes down to knowing when to listen to whom on what. Knowing the difference between signal and noise.
 
