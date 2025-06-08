@@ -16,7 +16,7 @@ description: "Dive into the Torus prediction swarm and the opportunity at hand."
 
 ![trust-the-swarm](@/assets/images/trust-the-swarm.jpeg)
 
-Given yesterday's big news of Polymarket integrating with X, it's a good moment to give more focus to the coming Torus prediction swarm and explaining the opportunity of it.
+Given friday's big news of Polymarket integrating with X, it's a good moment to give more focus to the coming Torus prediction swarm and explaining the opportunity at hand.
 
 #### Intro
 
