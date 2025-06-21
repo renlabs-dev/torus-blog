@@ -12,7 +12,7 @@ on:
 jobs:
   build:
     name: Code standards & build
-    runs-on: ubuntu-latest
+    runs-on: ubicloud-standard-2
     timeout-minutes: 3
 
     strategy:
