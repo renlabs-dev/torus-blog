@@ -1,5 +1,5 @@
 ---
-title: Torus v0.5 Mainnet Deployment - The Emergence Begins
+title: The Spark
 author: Renlabs
 pubDatetime: 2025-07-07T12:00:00Z
 featured: false
