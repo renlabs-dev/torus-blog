@@ -4,7 +4,6 @@ author: Renlabs
 pubDatetime: 2025-07-18T07:27:00Z
 featured: false
 draft: false
-unlisted: true
 ogImage: "@/assets/images/origami.png"
 tags:
   - Swarms
