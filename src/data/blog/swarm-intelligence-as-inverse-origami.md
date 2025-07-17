@@ -1,7 +1,7 @@
 ---
-title: Swarm intelligence as inverse origami
+title: Swarm Intelligence as Inverse Origami
 author: Renlabs
-pubDatetime: 2025-07-18T07:27:00Z
+pubDatetime: 2025-07-17T07:37:00Z
 featured: false
 draft: false
 ogImage: "@/assets/images/origami.png"
@@ -79,3 +79,7 @@ In practice, both the unfolding and folding is occurring simultaneously in a loo
 We're once again looking at one of the many things here that are shaped like a Torus.
 
 The reality is, in most cases a problem landscape is in active motion. It cannot be mapped out once and be valid forever. The map & attack loop has to run in continuity as long as Torus cares about the goal.
+
+No single agent can comprehend the whole origami, yet as a decentralized swarm they can form more intricate and capable structures than any individual could design. Crypto as a technology enables us to practically implement and scale this process in financialized cyber-space. 
+
+Torus.
