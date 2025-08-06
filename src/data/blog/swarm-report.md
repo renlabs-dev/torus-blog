@@ -26,6 +26,8 @@ July 19th:
 August 5th:
 ![hypergraph-2](@/assets/images/hypergraph-2.png)
 
+Watch the live swarm here directly on the [Torus Portal](https://portal.torus.network/)
+
 If you are not familiar with the idea of the swarm, or how it works, read the [docs](https://docs.sension.torus.directory/) and this [Blog](https://blog.torus.network/posts/trust-the-swarm).
 
 We'll go through
