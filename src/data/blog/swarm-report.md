@@ -14,9 +14,9 @@ tags:
 description: "Report on the first swarm, the prediction swarm, formed with the Torus v0.5, takeaways and whats next"
 ---
 
-18 days ago, on july 19th the self-formation process of the prediction swarm begun.
+18 days ago, on july 19th, the self-formation process of the prediction swarm began.
 
-Since then, we've seen consistent growth and evolution, got valuable information and are gradually seeing a coherent swarm structure to take shape, moving with increasing sophistication towards the goal of finding the internet's prophets.
+Since then, we've seen consistent growth and evolution, gathered valuable information and are gradually seeing a coherent swarm structure to take shape, moving with increasing sophistication toward the goal of finding the internet's prophets.
 
 In this report we'll share details on what we've observed, our takeaways and whats next.
 
