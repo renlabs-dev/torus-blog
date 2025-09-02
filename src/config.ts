@@ -1,6 +1,6 @@
 export const SITE = {
   website: "https://blog.torus.network//",
-  author: "Torus Network",
+  author: "Torus",
   profile: "https://torus.network/",
   desc: "The thermodynamic god's favorite blog.",
   title: "Torus Blog",
