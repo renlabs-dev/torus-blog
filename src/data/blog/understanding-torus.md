@@ -1,7 +1,7 @@
 ---
 title: "Understanding Torus"
 description: "one-liner"
-pubDate: 2025-09-19
+pubDatetime: 2025-09-19
 updatedDate: 2025-09-19
 tags: ["poropopo", "piripipi"]
 image: "/assets/og/my-image.jpg"
