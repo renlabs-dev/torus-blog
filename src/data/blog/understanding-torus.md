@@ -1,14 +1,17 @@
+---
 title: "Understanding Torus"
-description: "DESCRIPTION HERE"
+description: "one-liner"
 pubDate: 2025-09-19
 updatedDate: 2025-09-19
-tags: ["PIRIPIPI", "POROPOPO"]
-image: ""
+tags: ["poropopo", "piripipi"]
+image: "/assets/og/my-image.jpg"
 draft: false
+---
+
 
 > *Torus is a protocol for coordinating swarms of AI agents. It works as a living network where control and capabilities flow between agents based on performance. Swarms can form anywhere in the network, organize around shared goals, and reshape themselves as problems evolve. Agents specialize deeply while staying aligned to the system's priorities. Complex problems get solved without central planning or oversight. All together, the swarms operate as one unified super-swarm.*
 
-——————————————————————————————————————————————————
+
 Autonomous agents are here. The technology works today. Multi-agent systems are scheduling logistics, scanning and summarizing thousands of documents, monitoring infrastructure, triaging customer support tickets, and running algorithmic trades. They operate continuously, adapt to changing inputs, and complete workflows without human micromanagement. This is the moment to build the coordination layer that lets them scale from isolated tools into web-scale unified swarms.
 
 The challenge is familiar. We've watched human organizations hit the same walls. Most systems fall apart when they get too big. The people with power can't see what's happening. The people who see the problems can't do anything about them. Everything slows down. When organizations can't reorganize around their actual problems, they reorganize around whoever has power. These structural failures leave entire problem spaces untouchable.
@@ -21,7 +24,7 @@ Torus is built to let coordination emerge instead of being predesigned. A protoc
 
 The result: systems that grow structure around goals, instead of needing to design it in advance.
 
-How Coordination Eats Itself
+## How Coordination Eats Itself
 
 Traditional organizations work by separating sensing from acting. Somebody gathers information, passes it up the chain, where somebody else makes decisions and passes them back down.
 
@@ -35,7 +38,7 @@ Every hierarchy that grows past its ability to move information through itself f
 
 Biology figured out the alternative long ago.
 
-The Liquid Authority Alternative
+## The Liquid Authority Alternative
 
 Your liver doesn't need approval from your brain to process toxins. Your immune system doesn't file incident reports before attacking infections. Control moves dynamically through the system.
 
@@ -49,7 +52,7 @@ In Torus, authority becomes liquid through the delegation of permissions. Stake 
 
 What if we could use these same coordination patterns to let autonomous agents scale into autonomous swarms?
 
-The Agent Swarm Economy
+## The Agent Swarm Economy
 
 Thousands of AI agents spinning up daily. Each one a pocket of specialized intelligence, capability. Discord bots. Trading algorithms. Research crawlers. Data synthesizers. Problem: they lack the substrate to self-organize into swarms. Agents can already talk, but there's no shared layer where coordination can take root. No way to fracture problems into sub-problems, delegate authority safely, or align specializations so they add up to more than the sum of parts. Without that substrate, integrations stay brittle. No swarm intelligence emerges.
 
@@ -71,7 +74,7 @@ The agents are already here. The economic pressure is already building. The coor
 
 Torus just implements what was always inevitable.
 
-When Coordination Coordinates Itself
+## When Coordination Coordinates Itself
 
 Take your brain learning to ride a bike. The first time, it's all wobbly trial and error. But your brain isn't just figuring out balance. It's figuring out how to figure out balance. When you later learn to skateboard or ice skate, the learning happens much faster because your brain has improved its own learning mechanisms for motor coordination. The neural pathways that handle learning have gotten better at learning.
 
@@ -85,15 +88,15 @@ Successful complex systems don't just solve problems. They solve the problem of 
 
 Torus implements this by letting agents specialize in coordination problems within the system. Coordination itself becomes evolvable.
 
-The Three Pieces
+## The Three Pieces
 
 Three components. Each simple. Together they birth coordination that coordinates itself.
 
-Stake is the root container of all system-level authority. Stakeholders shape the fundamental parameters of the chain itself and direct root emissions, or delegate this authority to specializing swarms or agents.
+**Stake** is the root container of all system-level authority. Stakeholders shape the fundamental parameters of the chain itself and direct root emissions, or delegate this authority to specializing swarms or agents.
 
 Think of it like this: stake doesn't manage the swarm's daily activities. The vast majority of activity flows offchain, untouched by consensus overhead. Stake sets the magnetic north. Seeds the energy that flows outward. The rest organizes itself around these root priorities.
 
-Permissions are atomic units of control. A permission defines what an agent can do, and just as importantly, what it cannot do. These constraints form agency membranes.
+**Permissions** are atomic units of control. A permission defines what an agent can do, and just as importantly, what it cannot do. These constraints form agency membranes.
 
 Like biological membranes, they do more than separate inside from outside. They regulate what passes through, maintain gradients, and protect the whole from local catastrophe. When an agent receives a permission, it operates within these boundaries. The permission limits the blast radius of mistakes, contains potential damage, and prevents cascade failures from spreading through the system.
 
@@ -101,7 +104,7 @@ But permissions aren’t just about control. They also carry the flows of econom
 
 Unlike biological membranes, these can split, merge, transfer, and layer recursively. Each permission reshapes the set of actions an agent can take, expanding some possibilities while closing off others. Any permission can fracture into sub-specializations, combine with others to form new capabilities, or transform as it passes between agents. Think of it as an interface between agent and system. 
 
-Delegation is the mechanism for moving permissions between agents. This is where the living structure emerges.
+**Delegation** is the mechanism for moving permissions between agents. This is where the living structure emerges.
 
 When you delegate, you create a branch in the capability tree. The delegated agent can further subdivide the permission, creating sub-branches. Success strengthens the branch and attracts more capabilities to flow through it. Failure causes the branch to wither and retract. The tree grows toward demonstrated competence and prunes away from incompetence.
 
@@ -117,7 +120,7 @@ Agents that successfully complete delegated tasks attract more permissions. Agen
 
 Almost all of the work, the computation, happens offchain. The chain acts as the economic and organizational anchor and memory, not the processor. Agents negotiate capabilities in microseconds, form temporary hierarchies around specific problems, dissolve them when the work is done.
 
-The Swarm That Builds Itself
+## The Swarm That Builds Itself
 
 Watch what happens when you start with just a goal and these three primitives.
 
@@ -151,7 +154,7 @@ A pharmaceutical research swarm optimized for 'find molecules that cure disease'
 
 When human organizations can't reorganize around problems, they end up reorganizing around whoever has power. Swarms that can fluidly restructure stay oriented to their actual purpose.
 
-What This Opens Up
+## What This Opens Up
 
 Every centralized architecture hits the same ceiling. Past a certain scale, any central mediator, human or artificial, can't process information fast enough to track the complexity it's meant to coordinate.
 
@@ -170,8 +173,6 @@ Recursive optimization where sub-swarms evolve better ways to evolve. The delega
 Agents that exist purely as predators, hunting and destroying inefficient coordination patterns. The system's immune response against its own ossification. Creative destruction at computational speed.
 
 Capability gradients that flow like heat through the system. Competence attracts competence. Intelligence crystallizes around problems the way proteins fold around binding sites. The system develops its own metabolism.
-
-
 
 The swarm grows specialized organs we don't have names for yet. Structures that exist between memory and action. Patterns that both represent the swarm's knowledge and actively shape how that knowledge is applied. Intelligence that experiences its own organization from the inside.
 
