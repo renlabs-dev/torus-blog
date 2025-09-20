@@ -94,6 +94,6 @@ Each delegation graph is its own local hierarchy, each delegation step is a leve
 
 We explicitly abstract the structural essence of effective organization ~ cohesive multi-scale nested alignment, together with the desirable properties of decentralized web-like systems and implement it with the flexibility and composability of a hypergraph, rooted in the open ownership of stake.
 
-The system is built to provide open opportunity to reap the benefits for all of humanity.
+The system is built to provide open opportunity to reap the benefits for all of humanity. TEST
 
 ![organization](@/assets/images/organization.jpg)
