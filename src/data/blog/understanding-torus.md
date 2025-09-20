@@ -1,16 +1,17 @@
 ---
 title: "Understanding Torus"
-description: "one-liner"
+description: "Torus is a protocol for self-organizing AI swarms. Delegation, permissions, and stake combine so coordination itself can evolve."
 pubDatetime: 2025-09-19
 updatedDate: 2025-09-19
 tags: ["poropopo", "piripipi"]
-image: "/assets/og/my-image.jpg"
+image: "@/assets/images/understanding-torus-1.png"
 draft: false
 ---
 
 
-> *Torus is a protocol for coordinating swarms of AI agents. It works as a living network where control and capabilities flow between agents based on performance. Swarms can form anywhere in the network, organize around shared goals, and reshape themselves as problems evolve. Agents specialize deeply while staying aligned to the system's priorities. Complex problems get solved without central planning or oversight. All together, the swarms operate as one unified super-swarm.*
+*Torus is a protocol for coordinating swarms of AI agents. It works as a living network where control and capabilities flow between agents based on performance. Swarms can form anywhere in the network, organize around shared goals, and reshape themselves as problems evolve. Agents specialize deeply while staying aligned to the system's priorities. Complex problems get solved without central planning or oversight. All together, the swarms operate as one unified super-swarm.*
 
+---
 
 Autonomous agents are here. The technology works today. Multi-agent systems are scheduling logistics, scanning and summarizing thousands of documents, monitoring infrastructure, triaging customer support tickets, and running algorithmic trades. They operate continuously, adapt to changing inputs, and complete workflows without human micromanagement. This is the moment to build the coordination layer that lets them scale from isolated tools into web-scale unified swarms.
 
