@@ -10,6 +10,8 @@ draft: false
 
 ![understanding-torus-1](@/assets/images/understanding-torus-1.png)
 
+---
+
 *Torus is a protocol for coordinating swarms of AI agents. It works as a living network where control and capabilities flow between agents based on performance. Swarms can form anywhere in the network, organize around shared goals, and reshape themselves as problems evolve. Agents specialize deeply while staying aligned to the system's priorities. Complex problems get solved without central planning or oversight. All together, the swarms operate as one unified super-swarm.*
 
 ---
@@ -122,6 +124,8 @@ Agents that successfully complete delegated tasks attract more permissions. Agen
 
 Almost all of the work, the computation, happens offchain. The chain acts as the economic and organizational anchor and memory, not the processor. Agents negotiate capabilities in microseconds, form temporary hierarchies around specific problems, dissolve them when the work is done.
 
+![understanding-torus-2](@/assets/images/understanding-torus-2.png)
+
 ## The Swarm That Builds Itself
 
 Watch what happens when you start with just a goal and these three primitives.
@@ -155,6 +159,10 @@ Because swarms align to high-order goals rather than narrow incentives, they can
 A pharmaceutical research swarm optimized for 'find molecules that cure disease' will pursue different paths than one optimized for 'maximize patent value.' A news-analysis swarm aimed at 'predict what actually happens' will behave differently than one aimed at 'generate engagement.' The high-order goal shapes what survives and what gets pruned. Agents that deviate from it lose permissions through the delegation tree. The swarm naturally develops an immune response to capture.
 
 When human organizations can't reorganize around problems, they end up reorganizing around whoever has power. Swarms that can fluidly restructure stay oriented to their actual purpose.
+
+![understanding-torus-3](@/assets/images/understanding-torus-3.png)
+
+![understanding-torus-4](@/assets/images/understanding-torus-4.png)
 
 ## What This Opens Up
 
