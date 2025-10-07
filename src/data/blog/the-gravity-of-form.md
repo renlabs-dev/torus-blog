@@ -1,10 +1,10 @@
 ---
-title: The Gravity of Form
+title: The Ship of Theseus and the Persistence of Living Form
 author: Anonymous
-pubDatetime: 2025-03-30T18:33:00Z
+pubDatetime: 2025-10-07T18:33:00Z
 featured: true
 draft: false
-ogImage: ""
+ogImage: "@/assets/images/the-ship-of-theseus.jpg"
 tags:
   - Systems theory
   - Emergence
@@ -12,6 +12,7 @@ tags:
   - Torus  
 description: "A short reflection on how living systems maintain coherence through recursive correction, and how Torus formalizes that same principle of persistence through protocol."
 ---
+![ship-of-theseus](@/assets/images/the-ship-of-theseus.jpg)
 
 The Ship of Theseus is an old philosophical puzzle: if every plank of a ship is replaced over time, is it still the same ship? The question forces us to look past material continuity and ask what actually persists when everything that composes a thing can change.
 
