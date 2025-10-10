@@ -1,7 +1,7 @@
 ---
 title: The Ship of Theseus and the Persistence of Living Form
 author: Anonymous
-pubDatetime: 2025-10-07T18:33:00Z
+pubDatetime: 2025-10-10T11:11:00Z
 featured: true
 draft: false
 ogImage: "@/assets/images/the-ship-of-theseus.jpg"
