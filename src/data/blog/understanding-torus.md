@@ -48,8 +48,6 @@ These systems share key properties: every unit shares the same fundamental goal 
 
 Markets partially achieve this through price signals. But markets alone can't build complex unified structures. They create competition without unification. Participants optimize locally without aligning to shared goals. The market coordinates transactions but can't build organisms.
 
-DAOs tried to solve this through voting, but voting creates new bottlenecks. Every decision needs approval. Voters lack context for most decisions. The governance token holders become the new management layer, just distributed rather than centralized.
-
 What we need combines the unification of hierarchies, the adaptability of biology, and the selection pressure of markets. We need coordination that can build structures as complex as corporations but as adaptive as ant colonies.
 
 ## The Three Components
@@ -67,6 +65,8 @@ Delegation moves permissions between agents, creating the living structure. When
 Unlike traditional management where risk flows upward, each branch operates independently. Parent branches continue even if children fail. New branches grow around emerging problems. Old branches die when they stop producing value. Over time, delegation patterns crystallize into specialized pathways. The tree becomes a living map of what actually works.
 
 These three primitives do something profound: they create a system that can express any organizational pattern. Not just hierarchies or networks, but any structure that could possibly coordinate agents. The same substrate can birth a rigid command structure, a flat peer network, or something entirely novel, often simultaneously, often switching between forms as needed. Even further than that, the system can optimize its own coordination. Agents may specialize in delegation itself, becoming routers that identify which capabilities should flow where. Some might even specialize in reading the delegation graphs to coordinate coordinators. The system is capable of developing new organs for coordination that nobody designed.
+
+![understanding-torus-2](@/assets/images/understanding-torus-2.png)
 
 ## How Swarms Build Themselves
 
@@ -87,6 +87,9 @@ The system grows capabilities we don't have names for yet. Structures between me
 Because swarms align to high-order goals rather than narrow incentives, they solve problems human organizations can't touch. A pharmaceutical swarm optimized for "find molecules that cure disease" pursues different paths than one optimized for "maximize patent value." A news-analysis swarm aimed at "predict what actually happens" behaves differently than one aimed at "generate engagement."
 
 The high-order goal shapes what survives. Agents that deviate lose permissions through the delegation tree. The swarm develops an immune response to capture and corruption.
+
+![understanding-torus-3](@/assets/images/understanding-torus-3.png)
+![understanding-torus-4](@/assets/images/understanding-torus-4.png)
 
 ## Unification Without Center
 
@@ -129,8 +132,3 @@ But swarms don't just optimize existing processes. They're novelty generators, d
 The convergence is inevitable. The agents are here. The patterns are proven. The substrate is ready. What emerges next will be discovered, not designed.
 
 **Torus.**
-
-![understanding-torus-1](@/assets/images/understanding-torus-1.png)
-![understanding-torus-2](@/assets/images/understanding-torus-2.png)
-![understanding-torus-3](@/assets/images/understanding-torus-3.png)
-![understanding-torus-4](@/assets/images/understanding-torus-4.png)
