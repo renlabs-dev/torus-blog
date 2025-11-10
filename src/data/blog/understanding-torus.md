@@ -8,7 +8,7 @@ image: "@/assets/images/understanding-torus-1.png"
 draft: false
 ---
 
-![understanding-torus-1](@/assets/images/understanding-torus-1.png)
+![understanding-torus-0](@/assets/images/understanding-torus-0.png)
 
 ---
 
@@ -38,6 +38,8 @@ Every hierarchy that grows past its ability to move information faces this fate.
 
 Meanwhile, life solved this differently.
 
+![understanding-torus-1](@/assets/images/understanding-torus-1.png)
+
 ## How Nature Coordinates
 
 Your liver doesn't need approval from your brain to process toxins. Your immune system doesn't file reports before attacking infections. Control flows dynamically through living systems.
@@ -54,13 +56,13 @@ What we need combines the unification of hierarchies, the adaptability of biolog
 
 Torus builds unified coordination from three primitives that work together like metabolism in living systems.
 
-Stake anchors the entire system. It's the root container of all authority and economic energy in the protocol. Stakeholders don't manage daily operations. They set high-level priorities and direct root emissions, like DNA setting the basic parameters for a living organism. The vast majority of activity flows offchain, untouched by consensus overhead. Stake provides the magnetic north that everything else organizes around.
+**Stake** anchors the entire system. It's the root container of all authority and economic energy in the protocol. Stakeholders don't manage daily operations. They set high-level priorities and direct root emissions. The vast majority of activity flows offchain, untouched by consensus overhead. Stake provides the magnetic north that everything else organizes around.
 
-Permissions are atomic units of control. Each permission defines what an agent can do and, critically, what it cannot. These boundaries create protective membranes around agency. Like cell membranes, they don't just separate inside from outside. They regulate what passes through, maintain gradients, and prevent local failures from cascading through the system.
+**Permissions** are atomic units of control. Each permission defines what an agent can do and, critically, what it cannot. These boundaries create protective membranes around agency. Like cell membranes, they don't just separate inside from outside. They regulate what passes through, maintain gradients, and prevent local failures from cascading through the system.
 
 Permissions carry both control and incentives. Success attracts resources, failure drains them. This creates the swarm's metabolism: regulating not just what agents can do, but what paths are worth pursuing. Any permission can split into specializations, merge with others to form new capabilities, or transfer between agents. Each permission reshapes the space of possible actions.
 
-Delegation moves permissions between agents, creating the living structure. When you delegate, you create a branch in the capability tree. The delegated agent can subdivide further, creating sub-branches. Success strengthens branches and attracts more capabilities. Failure causes branches to wither.
+**Delegation** moves permissions between agents, creating the living structure. When you delegate, you create a branch in the capability tree. The delegated agent can subdivide further, creating sub-branches. Success strengthens branches and attracts more capabilities. Failure causes branches to wither.
 
 Unlike traditional management where risk flows upward, each branch operates independently. Parent branches continue even if children fail. New branches grow around emerging problems. Old branches die when they stop producing value. Over time, delegation patterns crystallize into specialized pathways. The tree becomes a living map of what actually works.
 
@@ -132,3 +134,5 @@ But swarms don't just optimize existing processes. They're novelty generators, d
 The convergence is inevitable. The agents are here. The patterns are proven. The substrate is ready. What emerges next will be discovered, not designed.
 
 **Torus.**
+
+![understanding-torus-5](@/assets/images/the-great-convergence.jpeg)
