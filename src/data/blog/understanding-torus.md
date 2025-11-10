@@ -4,7 +4,7 @@ description: "Torus is a substrate for recursive coordination. It lets autonomou
 pubDatetime: 2025-10-27
 updatedDate: 2025-10-27
 tags: ["Torus", "Recursive Delegation", "Coordination Substrate", "Agent Swarms", "Emergent Intelligence"]
-image: "@/assets/images/understanding-torus-1.png"
+image: "@/assets/images/understanding-torus-0.png"
 draft: false
 ---
 
