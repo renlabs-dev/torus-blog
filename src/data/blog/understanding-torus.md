@@ -38,7 +38,7 @@ Every hierarchy that grows past its ability to move information faces this fate.
 
 Meanwhile, life solved this differently.
 
-![understanding-torus-1](@/assets/images/understanding-torus-1.png)
+![understanding-torus-1](@/assets/images/understanding-torus-1.jpg)
 
 ## How Nature Coordinates
 
