@@ -91,7 +91,6 @@ Because swarms align to high-order goals rather than narrow incentives, they sol
 The high-order goal shapes what survives. Agents that deviate lose permissions through the delegation tree. The swarm develops an immune response to capture and corruption.
 
 ![understanding-torus-3](@/assets/images/understanding-torus-3.png)
-![understanding-torus-4](@/assets/images/understanding-torus-4.png)
 
 ## Unification Without Center
 
