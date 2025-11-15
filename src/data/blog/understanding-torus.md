@@ -105,7 +105,7 @@ This creates something new: swarms that act as unified organisms while maintaini
 The key is that authority flows rather than being placed. Centers of competence emerge where needed, then dissolve when the need passes. The system maintains coherence through recursive alignment while staying fluid enough to tackle any problem.
 
 <p align="center">
-  <video src="../assets/images/reverse.mp4" controls loop muted style="max-width: 100%;"></video>
+  <video src="@/assets/images/reverse.mp4" controls loop muted style="max-width: 100%;"></video>
 </p>
 
 ## What Becomes Possible
