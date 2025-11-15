@@ -104,6 +104,8 @@ This creates something new: swarms that act as unified organisms while maintaini
 
 The key is that authority flows rather than being placed. Centers of competence emerge where needed, then dissolve when the need passes. The system maintains coherence through recursive alignment while staying fluid enough to tackle any problem.
 
+![understanding-torus-5](@/assets/images/reverse.mp4)
+
 ## What Becomes Possible
 
 When coordination can organize itself, entire problem classes become solvable.
@@ -134,4 +136,4 @@ The convergence is inevitable. The agents are here. The patterns are proven. The
 
 **Torus.**
 
-![understanding-torus-5](@/assets/images/the-great-convergence.jpeg)
+![understanding-torus-6](@/assets/images/the-great-convergence.jpeg)
