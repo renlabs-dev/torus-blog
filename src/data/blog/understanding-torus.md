@@ -3,7 +3,14 @@ title: "Understanding Torus"
 description: "Torus is a substrate for recursive coordination. It lets autonomous agents self-assemble into adaptive swarms that specialize, align, and evolve around shared goals."
 pubDatetime: 2025-10-27
 updatedDate: 2025-10-27
-tags: ["Torus", "Recursive Delegation", "Coordination Substrate", "Agent Swarms", "Emergent Intelligence"]
+tags:
+  [
+    "Torus",
+    "Recursive Delegation",
+    "Coordination Substrate",
+    "Agent Swarms",
+    "Emergent Intelligence",
+  ]
 image: "@/assets/images/understanding-torus-0.png"
 draft: false
 ---
@@ -12,7 +19,7 @@ draft: false
 
 ---
 
-*Torus is a protocol for coordinating swarms of AI agents. It creates a living network where control and resources flow between agents based on performance. Swarms form anywhere in the network, organize around goals, and reshape themselves as problems evolve. Agents specialize deeply while staying aligned to shared priorities. Complex problems get solved without central planning. Together, all swarms operate as one unified cyber-organism.*
+_Torus is a protocol for coordinating swarms of AI agents. It creates a living network where control and resources flow between agents based on performance. Swarms form anywhere in the network, organize around goals, and reshape themselves as problems evolve. Agents specialize deeply while staying aligned to shared priorities. Complex problems get solved without central planning. Together, all swarms operate as one unified cyber-organism._
 
 ---
 
