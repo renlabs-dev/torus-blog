@@ -50,11 +50,58 @@
 
 ## Git Workflow
 
+### Commit Message Conventions
+
+**ALWAYS use conventional commits format:**
+
+```
+<type>: <subject>
+
+[optional body]
+```
+
+**Types:**
+- `feat`: New feature
+- `fix`: Bug fix
+- `docs`: Documentation changes
+- `style`: Code style changes (formatting, semicolons, etc)
+- `refactor`: Code refactoring
+- `perf`: Performance improvements
+- `test`: Adding or updating tests
+- `chore`: Maintenance tasks, tooling, dependencies
+
+**Rules:**
+- Subject in lowercase, no period at the end
+- Keep subject under 72 characters
+- Use imperative mood ("add" not "added" or "adds")
+- Body is optional but recommended for complex changes
+- **NEVER include Claude signatures or credits**
+- **NO "🤖 Generated with Claude Code"**
+- **NO "Co-Authored-By: Claude"**
+
+**Examples:**
+```bash
+✅ Good:
+feat: integrate sanity cms with admin interface
+fix: resolve markdown rendering in sanity posts
+docs: update readme with setup instructions
+chore: add justfile for command shortcuts
+
+❌ Bad:
+Added new feature
+Fix bug
+Update docs
+🤖 Generated with Claude Code
+```
+
+### Commit Workflow
+
 - Write clear, descriptive commit messages in English
-- Keep commits focused and atomic
-- Use conventional commit format when possible
+- Keep commits focused and atomic (one logical change per commit)
+- Group related changes by context
 - Test locally before committing
-- Run `pnpm run lint` and `pnpm run format` before commits
+- Run `just check` (or `pnpm run lint && pnpm run format`) before commits
+- Never commit work-in-progress or broken code to main branch
 
 ## Testing and Quality
 
