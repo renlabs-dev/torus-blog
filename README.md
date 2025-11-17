@@ -1,5 +1,9 @@
 # Torus Blog
 
+## 📚 Documentation
+
+For detailed information about creating blog posts using Sanity CMS, see [docs/CMS.md](./docs/CMS.md).
+
 ## Project Structure
 
 Inside of Torus Blog, you'll see the following folders and files:
@@ -37,9 +41,41 @@ Any static assets, like images can be placed in the `public/` directory.
 
 All blog posts are stored in `src/data/blog` directory.
 
+## Content Management
+
+This blog supports two ways to create content:
+
+1. **Sanity CMS** (Recommended for content creators)
+
+   - Access at `/admin` route (e.g., `http://localhost:4321/admin`)
+   - User-friendly visual editor
+   - No coding required
+   - See [docs/CMS.md](./docs/CMS.md) for detailed instructions
+
+2. **Markdown Files** (For developers)
+   - Create `.md` files in `src/data/blog/`
+   - Full control over content structure
+
 ## Commands
 
-All commands are run from the root of the project, from a terminal:
+All commands are run from the root of the project, from a terminal.
+
+### Using Just (Recommended)
+
+This project includes a [`justfile`](https://github.com/casey/just) for convenient command execution:
+
+```bash
+# Install just: brew install just (macOS) or cargo install just
+
+just           # List all available commands
+just dev       # Start dev server
+just build     # Build for production
+just check     # Run lint + format check
+just fix       # Auto-fix formatting and linting
+just start     # Full setup: install + sync + dev
+```
+
+### Using pnpm directly
 
 | Command                 | Action                                                                                                                           |
 | :---------------------- | :------------------------------------------------------------------------------------------------------------------------------- |
