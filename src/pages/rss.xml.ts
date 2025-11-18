@@ -1,3 +1,5 @@
+export const prerender = true;
+
 import rss from "@astrojs/rss";
 import { getAllPosts } from "@/utils/getAllPosts";
 import { getPath } from "@/utils/getPath";
