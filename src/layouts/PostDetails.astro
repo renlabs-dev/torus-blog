@@ -35,8 +35,7 @@ const {
 
 // Check if it's a Sanity post (has no filePath)
 const isSanityPost = !post.filePath;
-type ContentComponent = typeof import("astro").AstroComponent;
-let Content: ContentComponent | undefined;
+let Content: ((props: Record<string, unknown>) => unknown) | undefined;
 let htmlContent = "";
 
 if (isSanityPost) {
