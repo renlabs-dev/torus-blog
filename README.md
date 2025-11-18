@@ -2,7 +2,8 @@
 
 ## 📚 Documentation
 
-For detailed information about creating blog posts using Sanity CMS, see [docs/CMS.md](./docs/CMS.md).
+- **[CMS Guide](./docs/CMS.md)** - How to create and manage blog posts using Sanity CMS
+- **[Deployment Guide](./docs/DEPLOYMENT.md)** - Environment variables setup and deployment instructions
 
 ## Project Structure
 
