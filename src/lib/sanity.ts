@@ -23,6 +23,30 @@ export interface SanityBlogPost {
   hideEditPost?: boolean;
 }
 
+// Validate required environment variables at runtime
+function validateSanityConfig() {
+  const errors: string[] = [];
+
+  if (!SANITY_CONFIG.projectId) {
+    errors.push("PUBLIC_TORUS_BLOG_SANITY_PROJECT_ID");
+  }
+  if (!SANITY_CONFIG.dataset) {
+    errors.push("PUBLIC_TORUS_BLOG_SANITY_DATASET");
+  }
+  if (!SANITY_CONFIG.token) {
+    errors.push("TORUS_BLOG_SANITY_API_TOKEN");
+  }
+
+  if (errors.length > 0) {
+    throw new Error(
+      `Missing required Sanity environment variables: ${errors.join(", ")}`
+    );
+  }
+}
+
+// Validate configuration before creating client
+validateSanityConfig();
+
 // Initialize the Sanity client
 const client = createClient({
   projectId: SANITY_CONFIG.projectId,
@@ -52,7 +76,13 @@ export async function getSanityPosts(): Promise<SanityBlogPost[]> {
     hideEditPost
   }`;
 
-  return await client.fetch(query);
+  try {
+    return await client.fetch(query);
+  } catch (error) {
+    throw new Error(
+      `Failed to fetch Sanity blog posts: ${error instanceof Error ? error.message : String(error)}`
+    );
+  }
 }
 
 export async function getSanityPostBySlug(
@@ -77,5 +107,11 @@ export async function getSanityPostBySlug(
     hideEditPost
   }`;
 
-  return await client.fetch(query, { slug });
+  try {
+    return await client.fetch(query, { slug });
+  } catch (error) {
+    throw new Error(
+      `Failed to fetch Sanity blog post with slug "${slug}": ${error instanceof Error ? error.message : String(error)}`
+    );
+  }
 }

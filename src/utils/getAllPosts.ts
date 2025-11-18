@@ -1,6 +1,32 @@
 import { getCollection, type CollectionEntry } from "astro:content";
 import { getSanityPosts, type SanityBlogPost } from "@/lib/sanity";
 import { toHTML } from "@portabletext/to-html";
+import type { ImageAsset } from "@sanity/types";
+
+/**
+ * Safely converts Sanity ImageAsset to Astro-compatible ogImage format
+ */
+function convertOgImage(
+  ogImage: ImageAsset | undefined
+): string | { src: string } | undefined {
+  if (!ogImage) {
+    return undefined;
+  }
+
+  // If ogImage is already a string URL, return as-is
+  if (typeof ogImage === "string") {
+    return ogImage;
+  }
+
+  // If it's an ImageAsset object, extract the URL
+  // Sanity ImageAsset typically has _type and other properties
+  if (typeof ogImage === "object" && "url" in ogImage) {
+    return ogImage.url as string;
+  }
+
+  // Fallback: return undefined if we can't convert
+  return undefined;
+}
 
 // Convert a Sanity post to Astro's CollectionEntry format
 function sanityPostToCollectionEntry(
@@ -24,7 +50,7 @@ function sanityPostToCollectionEntry(
       unlisted: sanityPost.unlisted || false,
       tags: sanityPost.tags || [],
       description: sanityPost.description,
-      ogImage: sanityPost.ogImage as string | { src: string } | undefined,
+      ogImage: convertOgImage(sanityPost.ogImage),
       canonicalURL: sanityPost.canonicalURL,
       hideEditPost: sanityPost.hideEditPost || false,
     },
@@ -32,13 +58,12 @@ function sanityPostToCollectionEntry(
     slug: sanityPost.slug.current,
     filePath: undefined, // Sanity posts don't have filePath
     render: async () => ({
-      Content: ({ sanitize = true }: { sanitize?: boolean }) => {
+      Content: () => {
         // Return a functional component that renders the HTML
-        const html = sanitize ? htmlContent : htmlContent;
         return {
           type: "div",
           props: {
-            dangerouslySetInnerHTML: { __html: html },
+            dangerouslySetInnerHTML: { __html: htmlContent },
             className: "sanity-content",
           },
         };

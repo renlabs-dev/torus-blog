@@ -41,8 +41,9 @@ lint:
 check: lint format-check
 
 # Fix all code issues (format + lint)
+# Note: lint --fix may fail on some errors, but format will still be applied
 fix: format
-    pnpm run lint --fix
+    pnpm run lint --fix || true
 
 # Clean build artifacts
 clean:
