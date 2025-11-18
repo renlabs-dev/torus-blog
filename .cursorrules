@@ -15,7 +15,12 @@
 - Follow ESLint configuration defined in `eslint.config.js`
 - Use Prettier for code formatting (config in `.prettierrc.mjs`)
 - No `console.log` statements in production code (use proper logging)
-- Prefer `const` over `let` when variables won't be reassigned
+- **Always prefer immutability:**
+  - Use `const` instead of `let` whenever possible
+  - Avoid variable reassignment
+  - Use functional patterns: `.map()`, `.filter()`, `.reduce()` instead of loops with mutations
+  - Use spread operators `[...array]`, `{...object}` instead of mutating methods
+  - Prefer promise chaining (`.then()/.catch()`) over try/catch with mutable variables
 - Use explicit types instead of `any` - prefer union types or proper interfaces
 - Use `@ts-expect-error` instead of `@ts-ignore` with explanatory comments
 

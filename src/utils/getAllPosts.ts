@@ -56,15 +56,10 @@ export async function getAllPosts(): Promise<CollectionEntry<"blog">[]> {
   // Fetch markdown posts
   const markdownPosts = await getCollection("blog");
 
-  // Fetch Sanity posts
-  let sanityPosts: CollectionEntry<"blog">[] = [];
-  try {
-    const sanityData = await getSanityPosts();
-    sanityPosts = sanityData.map(sanityPostToCollectionEntry);
-  } catch {
-    // Silently fail if Sanity posts cannot be fetched
-    // Continue without Sanity posts if there's an error
-  }
+  // Fetch Sanity posts (immutable approach with promise handling)
+  const sanityPosts = await getSanityPosts()
+    .then(sanityData => sanityData.map(sanityPostToCollectionEntry))
+    .catch(() => [] as CollectionEntry<"blog">[]);
 
   // Combine and return all posts
   return [...markdownPosts, ...sanityPosts];
