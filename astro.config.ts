@@ -42,6 +42,17 @@ export default defineConfig({
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"],
     },
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            // Split Sanity Studio into separate chunk to reduce main bundle
+            "sanity-studio": ["sanity"],
+          },
+        },
+      },
+      chunkSizeWarningLimit: 1000,
+    },
   },
   image: {
     // Used for all Markdown images; not configurable per-image

@@ -1,3 +1,5 @@
+export const prerender = true;
+
 import type { APIRoute } from "astro";
 import { type CollectionEntry } from "astro:content";
 import { getAllPosts } from "@/utils/getAllPosts";
