@@ -42,10 +42,8 @@ if (isSanityPost) {
   // For Sanity posts, use body directly as HTML
   htmlContent = post.body || "";
 } else {
-  // For markdown posts, use normal render
-  const rendered = await render(post);
-  // @ts-ignore - Content component type from Astro render
-  Content = rendered.Content;
+  // For markdown posts, use Astro's recommended destructuring pattern
+  ({ Content } = await render(post));
 }
 
 let ogImageUrl: string | undefined;
@@ -119,13 +117,7 @@ const nextPost =
       <EditPost class="max-sm:hidden" {hideEditPost} {post} />
     </div>
     <article id="article" class="mx-auto prose mt-8 max-w-3xl">
-      {
-        isSanityPost ? (
-          <div set:html={htmlContent} />
-        ) : (
-          Content && <Content />
-        )
-      }
+      {isSanityPost ? <div set:html={htmlContent} /> : Content && <Content />}
     </article>
 
     <hr class="my-8 border-dashed" />

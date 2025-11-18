@@ -37,7 +37,7 @@ export default defineConfig({
     },
   },
   vite: {
-    // @ts-ignore - Tailwind CSS Vite plugin type compatibility
+    // @ts-expect-error - Tailwind CSS Vite plugin type compatibility issue
     plugins: [tailwindcss()],
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"],

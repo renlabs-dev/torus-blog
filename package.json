@@ -23,7 +23,7 @@
     "@sanity/astro": "^3.2.10",
     "@sanity/client": "^7.12.1",
     "@sanity/types": "^4.15.0",
-    "@tailwindcss/vite": "^4.0.14",
+    "@tailwindcss/vite": "^4.1.17",
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
     "astro": "^5.5.2",
