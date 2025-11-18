@@ -142,7 +142,19 @@ Update docs
 
 ## Environment Variables
 
+**Naming Convention:**
+- **ALL environment variables MUST use the project prefix: `TORUS_BLOG_`**
+- Format: `PUBLIC_TORUS_BLOG_<SERVICE>_<VARIABLE>`
+- Examples:
+  - `PUBLIC_TORUS_BLOG_SANITY_PROJECT_ID`
+  - `PUBLIC_TORUS_BLOG_SANITY_DATASET`
+  - `TORUS_BLOG_SANITY_API_TOKEN`
+  - `PUBLIC_TORUS_BLOG_GOOGLE_ANALYTICS_ID`
+
+**Rules:**
 - Store sensitive data in `.env` (git ignored)
 - Document required env vars in `.env.example`
 - Use `PUBLIC_` prefix for client-side accessible variables
 - Never commit actual API keys or tokens
+- Never use hardcoded fallback values in configuration files
+- Always use the project prefix to avoid conflicts with other projects
