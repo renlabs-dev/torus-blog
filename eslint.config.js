@@ -14,11 +14,5 @@ export default [
     },
   },
   { rules: { "no-console": "error" } },
-  {
-    files: ["src/env.d.ts"],
-    rules: {
-      "@typescript-eslint/triple-slash-reference": "off",
-    },
-  },
   { ignores: ["dist/**", ".astro", "public/pagefind/**"] },
 ];
