@@ -1,5 +1,5 @@
 import { defineConfig } from "sanity";
-import { deskTool } from "sanity/desk";
+import { structureTool } from "sanity/structure";
 import { schemaTypes } from "./schemaTypes";
 import { SANITY_CONFIG } from "./src/lib/sanity.config";
 
@@ -8,7 +8,7 @@ export default defineConfig({
   title: "Torus Blog",
   projectId: SANITY_CONFIG.projectId,
   dataset: SANITY_CONFIG.dataset,
-  plugins: [deskTool()],
+  plugins: [structureTool()],
   schema: {
     types: schemaTypes,
   },

@@ -35,12 +35,13 @@ const {
 
 // Check if it's a Sanity post (has no filePath)
 const isSanityPost = !post.filePath;
-let Content;
+type ContentComponent = typeof import("astro").AstroComponent;
+let Content: ContentComponent | undefined;
 let htmlContent = "";
 
 if (isSanityPost) {
   // For Sanity posts, use body directly as HTML
-  htmlContent = post.body;
+  htmlContent = post.body || "";
 } else {
   // For markdown posts, use normal render
   const rendered = await render(post);

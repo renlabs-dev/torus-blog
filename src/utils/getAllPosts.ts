@@ -29,7 +29,6 @@ function sanityPostToCollectionEntry(
       hideEditPost: sanityPost.hideEditPost || false,
     },
     body: htmlContent,
-    // @ts-expect-error - Additional fields required for CollectionEntry
     slug: sanityPost.slug.current,
     filePath: undefined, // Sanity posts don't have filePath
     render: async () => ({

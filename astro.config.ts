@@ -7,6 +7,7 @@ import sanity from "@sanity/astro";
 import react from "@astrojs/react";
 import { SITE } from "./src/config";
 import { SANITY_CONFIG } from "./src/lib/sanity.config";
+import type { PluginOption } from "vite";
 
 // https://astro.build/config
 export default defineConfig({
@@ -33,7 +34,7 @@ export default defineConfig({
     },
   },
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [tailwindcss()] as PluginOption,
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"],
     },
