@@ -11,7 +11,7 @@ import { SANITY_CONFIG } from "./src/lib/sanity.config";
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
-  output: "static",
+  output: "hybrid",
   integrations: [
     sanity({
       projectId: SANITY_CONFIG.projectId,
@@ -33,6 +33,7 @@ export default defineConfig({
     },
   },
   vite: {
+    // @ts-ignore - Tailwind CSS Vite plugin type compatibility
     plugins: [tailwindcss()],
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"],

@@ -35,7 +35,7 @@ const {
 
 // Check if it's a Sanity post (has no filePath)
 const isSanityPost = !post.filePath;
-let Content: ((props: Record<string, unknown>) => unknown) | undefined;
+let Content;
 let htmlContent = "";
 
 if (isSanityPost) {
@@ -44,6 +44,7 @@ if (isSanityPost) {
 } else {
   // For markdown posts, use normal render
   const rendered = await render(post);
+  // @ts-ignore - Content component type from Astro render
   Content = rendered.Content;
 }
 
@@ -118,7 +119,13 @@ const nextPost =
       <EditPost class="max-sm:hidden" {hideEditPost} {post} />
     </div>
     <article id="article" class="mx-auto prose mt-8 max-w-3xl">
-      {isSanityPost ? <div set:html={htmlContent} /> : <Content />}
+      {
+        isSanityPost ? (
+          <div set:html={htmlContent} />
+        ) : (
+          Content && <Content />
+        )
+      }
     </article>
 
     <hr class="my-8 border-dashed" />
