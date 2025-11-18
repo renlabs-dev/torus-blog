@@ -101,39 +101,6 @@ docker-compose up
 
 ---
 
-## Platform-Specific Guides
-
-### Vercel
-
-1. Go to your project settings
-2. Navigate to **Environment Variables**
-3. Add all three variables
-4. Set **Environments** to: Production, Preview, Development
-5. Redeploy
-
-### Netlify
-
-1. Go to **Site settings** → **Environment variables**
-2. Click **Add a variable**
-3. Add all three variables
-4. Choose **All scopes**
-5. Trigger a new deploy
-
-### Cloudflare Pages
-
-1. Go to project **Settings** → **Environment variables**
-2. Add variables for **Production** and **Preview**
-3. Save and redeploy
-
-### Railway
-
-1. Go to your project
-2. Click **Variables** tab
-3. Add **New Variable** for each
-4. Railway will automatically redeploy
-
----
-
 ## Verifying Deployment
 
 After deploying, verify everything works:
