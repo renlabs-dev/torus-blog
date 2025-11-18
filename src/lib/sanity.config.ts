@@ -7,14 +7,16 @@
  * - PUBLIC_TORUS_BLOG_SANITY_DATASET: The dataset to use (required)
  * - TORUS_BLOG_SANITY_API_TOKEN: API token for authenticated requests (required)
  *
- * Note: During Astro config load, env vars may not be available yet.
- * Validation happens at runtime when the Sanity client is initialized.
+ * Note: The "placeholder-id" fallback is required for Astro/Sanity integration
+ * to load during build time when env vars may not be available (e.g., CI).
+ * The actual validation happens at runtime in src/lib/sanity.ts.
  */
 export const SANITY_CONFIG = {
-  projectId: import.meta.env.PUBLIC_TORUS_BLOG_SANITY_PROJECT_ID || "",
+  projectId:
+    import.meta.env.PUBLIC_TORUS_BLOG_SANITY_PROJECT_ID || "placeholder-id",
   dataset: import.meta.env.PUBLIC_TORUS_BLOG_SANITY_DATASET || "production",
   apiVersion: "2024-01-01",
   useCdn: false,
-  token: import.meta.env.TORUS_BLOG_SANITY_API_TOKEN || "",
+  token: import.meta.env.TORUS_BLOG_SANITY_API_TOKEN || "placeholder-token",
   studioBasePath: "/admin",
 } as const;
