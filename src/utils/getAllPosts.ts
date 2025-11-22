@@ -2,6 +2,14 @@ import { getCollection, type CollectionEntry } from "astro:content";
 import { getSanityPosts, type SanityBlogPost } from "@/lib/sanity";
 import { toHTML } from "@portabletext/to-html";
 import type { ImageAsset } from "@sanity/types";
+import imageUrlBuilder from "@sanity/image-url";
+import { SANITY_CONFIG } from "@/lib/sanity.config";
+
+// Initialize Sanity image URL builder
+const builder = imageUrlBuilder({
+  projectId: SANITY_CONFIG.projectId,
+  dataset: SANITY_CONFIG.dataset,
+});
 
 /**
  * Safely converts Sanity ImageAsset to Astro-compatible ogImage format
@@ -32,8 +40,25 @@ function convertOgImage(
 function sanityPostToCollectionEntry(
   sanityPost: SanityBlogPost
 ): CollectionEntry<"blog"> {
-  // Convert Portable Text to HTML
-  const htmlContent = toHTML(sanityPost.content);
+  // Convert Portable Text to HTML with custom image serializer
+  const htmlContent = toHTML(sanityPost.content, {
+    components: {
+      types: {
+        image: ({ value }) => {
+          const imageUrl = builder.image(value).width(800).url();
+          const alt = value.alt || "";
+          const caption = value.caption || "";
+
+          return `
+            <figure class="sanity-image">
+              <img src="${imageUrl}" alt="${alt}" loading="lazy" />
+              ${caption ? `<figcaption>${caption}</figcaption>` : ""}
+            </figure>
+          `;
+        },
+      },
+    },
+  });
 
   return {
     id: sanityPost.slug.current,
@@ -52,7 +77,7 @@ function sanityPostToCollectionEntry(
       description: sanityPost.description,
       ogImage: convertOgImage(sanityPost.ogImage),
       canonicalURL: sanityPost.canonicalURL,
-      hideEditPost: sanityPost.hideEditPost || false,
+      hideEditPost: true, // Always hide for Sanity posts - managed in Sanity Studio, not GitHub
     },
     body: htmlContent,
     slug: sanityPost.slug.current,

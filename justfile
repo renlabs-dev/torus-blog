@@ -7,7 +7,7 @@ default:
 
 # Install dependencies
 install:
-    pnpm install
+    pnpm install --frozen-lockfile --ignore-scripts
 
 # Start local dev server at localhost:4321
 dev:

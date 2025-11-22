@@ -84,9 +84,31 @@ export const blogPost = defineType({
       name: "content",
       title: "Content",
       type: "array",
-      of: [{ type: "block" }],
+      of: [
+        { type: "block" },
+        {
+          type: "image",
+          options: {
+            hotspot: true,
+          },
+          fields: [
+            {
+              name: "alt",
+              type: "string",
+              title: "Alternative text",
+              description: "Important for SEO and accessibility",
+            },
+            {
+              name: "caption",
+              type: "string",
+              title: "Caption",
+              description: "Optional caption displayed below the image",
+            },
+          ],
+        },
+      ],
       validation: (Rule) => Rule.required(),
-      description: "Main blog post content (supports rich text)",
+      description: "Main blog post content (supports rich text and images)",
     }),
     defineField({
       name: "ogImage",

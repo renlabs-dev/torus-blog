@@ -5,23 +5,18 @@ import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
 import sanity from "@sanity/astro";
 import react from "@astrojs/react";
-import node from "@astrojs/node";
 import { SITE } from "./src/config";
-import { SANITY_CONFIG } from "./src/lib/sanity.config";
 
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
-  output: "server",
-  adapter: node({
-    mode: "standalone",
-  }),
+  output: "static",
   integrations: [
     sanity({
-      projectId: SANITY_CONFIG.projectId,
-      dataset: SANITY_CONFIG.dataset,
-      useCdn: SANITY_CONFIG.useCdn,
-      studioBasePath: SANITY_CONFIG.studioBasePath,
+      projectId: import.meta.env.PUBLIC_TORUS_BLOG_SANITY_PROJECT_ID,
+      dataset: import.meta.env.PUBLIC_TORUS_BLOG_SANITY_DATASET,
+      useCdn: false,
+      studioBasePath: "/admin",
     }),
     react(),
     sitemap({
@@ -63,6 +58,5 @@ export default defineConfig({
     svg: true,
     responsiveImages: true,
     preserveScriptOrder: true,
-    session: true,
   },
 });
