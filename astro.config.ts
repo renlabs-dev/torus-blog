@@ -13,10 +13,13 @@ export default defineConfig({
   output: "static",
   integrations: [
     sanity({
-      projectId: import.meta.env.PUBLIC_TORUS_BLOG_SANITY_PROJECT_ID,
-      dataset: import.meta.env.PUBLIC_TORUS_BLOG_SANITY_DATASET,
+      projectId:
+        import.meta.env.PUBLIC_TORUS_BLOG_SANITY_PROJECT_ID ||
+        "build-placeholder",
+      dataset: import.meta.env.PUBLIC_TORUS_BLOG_SANITY_DATASET || "production",
       useCdn: false,
-      studioBasePath: "/admin",
+      // Studio is disabled for production builds
+      // Use dev server to access /admin
     }),
     react(),
     sitemap({
