@@ -10,9 +10,10 @@ import getUniqueTags from "@/utils/getUniqueTags";
 import { getAllPosts } from "@/utils/getAllPosts";
 import { SITE } from "@/config";
 
-const posts = await getAllPosts();
+const allPosts = await getAllPosts();
+const posts = allPosts.filter(({ data }) => !data.draft);
 
-let tags = getUniqueTags(posts);
+const tags = getUniqueTags(posts);
 ---
 
 <Layout title={`Tags | ${SITE.title}`}>

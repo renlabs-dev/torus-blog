@@ -12,7 +12,8 @@ import { getAllPosts } from "@/utils/getAllPosts";
 import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
 import { SITE } from "@/config";
 
-const posts = await getAllPosts();
+const allPosts = await getAllPosts();
+const posts = allPosts.filter(({ data }) => !data.draft);
 
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);

@@ -109,7 +109,14 @@ export async function getAllPosts(): Promise<CollectionEntry<"blog">[]> {
   // Fetch Sanity posts (immutable approach with promise handling)
   const sanityPosts = await getSanityPosts()
     .then(sanityData => sanityData.map(sanityPostToCollectionEntry))
-    .catch(() => [] as CollectionEntry<"blog">[]);
+    .catch(error => {
+      // eslint-disable-next-line no-console -- Production error logging for diagnosing Sanity issues
+      console.error(
+        "Failed to fetch Sanity posts, serving markdown-only content:",
+        error
+      );
+      return [] as CollectionEntry<"blog">[];
+    });
 
   // Combine and return all posts
   return [...markdownPosts, ...sanityPosts];
