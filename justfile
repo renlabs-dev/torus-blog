@@ -6,6 +6,10 @@ default:
     @just --list
 
 # Install dependencies
+# Note: --ignore-scripts is used as a security measure against supply chain attacks
+# It prevents automatic execution of lifecycle scripts from untrusted dependencies
+# If specific packages need build scripts (e.g., Sharp for image optimization),
+# they can be rebuilt explicitly with: pnpm rebuild <package-name>
 install:
     pnpm install --frozen-lockfile --ignore-scripts
 

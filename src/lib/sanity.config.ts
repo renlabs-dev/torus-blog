@@ -7,15 +7,14 @@
  * - PUBLIC_TORUS_BLOG_SANITY_DATASET: The dataset to use (required)
  * - TORUS_BLOG_SANITY_API_TOKEN: API token for authenticated requests (required)
  *
- * Note: Fallback values are required for build-time when env vars may not be available.
+ * Note: Missing environment variables will be handled by isSanityConfigured() validation
  */
 
 export const SANITY_CONFIG = {
-  projectId:
-    import.meta.env.PUBLIC_TORUS_BLOG_SANITY_PROJECT_ID || "build-placeholder",
-  dataset: import.meta.env.PUBLIC_TORUS_BLOG_SANITY_DATASET || "production",
+  projectId: import.meta.env.PUBLIC_TORUS_BLOG_SANITY_PROJECT_ID,
+  dataset: import.meta.env.PUBLIC_TORUS_BLOG_SANITY_DATASET,
   apiVersion: "2024-01-01",
   useCdn: false,
-  token: import.meta.env.TORUS_BLOG_SANITY_API_TOKEN || "build-placeholder",
+  token: import.meta.env.TORUS_BLOG_SANITY_API_TOKEN,
   studioBasePath: "/admin",
 } as const;

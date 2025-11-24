@@ -1,6 +1,6 @@
 import { getCollection, type CollectionEntry } from "astro:content";
 import { getSanityPosts, type SanityBlogPost } from "@/lib/sanity";
-import { toHTML } from "@portabletext/to-html";
+import { toHTML, escapeHTML } from "@portabletext/to-html";
 import type { ImageAsset } from "@sanity/types";
 import imageUrlBuilder from "@sanity/image-url";
 import { SANITY_CONFIG } from "@/lib/sanity.config";
@@ -46,8 +46,8 @@ function sanityPostToCollectionEntry(
       types: {
         image: ({ value }) => {
           const imageUrl = builder.image(value).width(800).url();
-          const alt = value.alt || "";
-          const caption = value.caption || "";
+          const alt = escapeHTML(value.alt || "");
+          const caption = escapeHTML(value.caption || "");
 
           return `
             <figure class="sanity-image">

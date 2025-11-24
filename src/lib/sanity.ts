@@ -25,12 +25,23 @@ export interface SanityBlogPost {
 
 /**
  * Check if Sanity configuration is valid
+ * Validates that all required fields are non-empty strings and not placeholder values
  */
 function isSanityConfigured(): boolean {
+  const { projectId, dataset, token } = SANITY_CONFIG;
+
   return !!(
-    SANITY_CONFIG.projectId &&
-    SANITY_CONFIG.dataset &&
-    SANITY_CONFIG.token
+    projectId &&
+    typeof projectId === "string" &&
+    projectId.trim() &&
+    projectId !== "build-placeholder" &&
+    dataset &&
+    typeof dataset === "string" &&
+    dataset.trim() &&
+    token &&
+    typeof token === "string" &&
+    token.trim() &&
+    token !== "build-placeholder"
   );
 }
 
