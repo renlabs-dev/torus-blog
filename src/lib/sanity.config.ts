@@ -16,5 +16,5 @@ export const SANITY_CONFIG = {
   apiVersion: "2024-01-01",
   useCdn: false,
   token: import.meta.env.TORUS_BLOG_SANITY_API_TOKEN,
-  studioBasePath: "/admin",
+  studioBasePath: "/studio",
 } as const;

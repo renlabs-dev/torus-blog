@@ -42,12 +42,12 @@ Both methods create posts that appear together on the blog seamlessly.
    ```
 
 2. **Open Sanity Studio:**
-   - Navigate to: `http://localhost:4321/admin`
+   - Navigate to: `http://localhost:4321/studio`
    - Sign in with your Sanity account credentials
 
 ### Production Environment
 
-- Access at: `https://yourdomain.com/admin`
+- Access at: `https://yourdomain.com/studio`
 - Requires authentication with a Sanity account that has project access
 
 ---
@@ -56,7 +56,7 @@ Both methods create posts that appear together on the blog seamlessly.
 
 ### Step 1: Open Sanity Studio
 
-1. Navigate to the `/admin` route
+1. Navigate to the `/studio` route
 2. Sign in with your credentials
 3. You'll see the Sanity Studio dashboard
 
@@ -281,7 +281,7 @@ Both methods create posts that appear together on the blog seamlessly.
 
 ### Can't Access Sanity Studio
 
-**Problem:** `/admin` page won't load
+**Problem:** `/studio` page won't load
 
 **Solutions:**
 - ✅ Ensure dev server is running (`pnpm run dev`)

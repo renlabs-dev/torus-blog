@@ -5,12 +5,16 @@ import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
 import sanity from "@sanity/astro";
 import react from "@astrojs/react";
+import node from "@astrojs/node";
 import { SITE } from "./src/config";
 
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
-  output: "static",
+  output: "server",
+  adapter: node({
+    mode: "standalone",
+  }),
   integrations: [
     sanity({
       projectId:
@@ -18,8 +22,8 @@ export default defineConfig({
         "build-placeholder",
       dataset: import.meta.env.PUBLIC_TORUS_BLOG_SANITY_DATASET || "production",
       useCdn: false,
-      // Studio available at /admin in dev mode only
-      studioBasePath: "/admin",
+      // Studio path (avoids common bot targets like /admin)
+      studioBasePath: "/studio",
     }),
     react(),
     sitemap({
