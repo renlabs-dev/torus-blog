@@ -370,7 +370,6 @@ Both methods create posts that appear together on the blog seamlessly.
 - **Bold:** Ctrl/Cmd + B
 - **Italic:** Ctrl/Cmd + I
 - **Save:** Ctrl/Cmd + S
-- **Publish:** Ctrl/Cmd + Alt + P
 
 ---
 

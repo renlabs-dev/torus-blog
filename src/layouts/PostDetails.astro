@@ -117,13 +117,7 @@ const nextPost =
       <EditPost class="max-sm:hidden" {hideEditPost} {post} />
     </div>
     <article id="article" class="mx-auto prose mt-8 max-w-3xl">
-      {
-        isSanityPost ? (
-          <div set:html={htmlContent} />
-        ) : Content ? (
-          <Content />
-        ) : null
-      }
+      {isSanityPost ? <div set:html={htmlContent} /> : Content && <Content />}
     </article>
 
     <hr class="my-8 border-dashed" />

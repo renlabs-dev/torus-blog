@@ -1,6 +1,7 @@
 import { getCollection, type CollectionEntry } from "astro:content";
 import { getSanityPosts, type SanityBlogPost } from "@/lib/sanity";
 import { toHTML, escapeHTML } from "@portabletext/to-html";
+import sanitizeHtml from "sanitize-html";
 import type { ImageAsset } from "@sanity/types";
 import imageUrlBuilder from "@sanity/image-url";
 import { SANITY_CONFIG } from "@/lib/sanity.config";
@@ -41,7 +42,7 @@ function sanityPostToCollectionEntry(
   sanityPost: SanityBlogPost
 ): CollectionEntry<"blog"> {
   // Convert Portable Text to HTML with custom image serializer
-  const htmlContent = toHTML(sanityPost.content, {
+  const rawHtml = toHTML(sanityPost.content, {
     components: {
       types: {
         image: ({ value }) => {
@@ -57,6 +58,20 @@ function sanityPostToCollectionEntry(
           `;
         },
       },
+    },
+  });
+
+  // Sanitize HTML to prevent XSS attacks from compromised Sanity accounts
+  const htmlContent = sanitizeHtml(rawHtml, {
+    allowedTags: sanitizeHtml.defaults.allowedTags.concat([
+      "img",
+      "figure",
+      "figcaption",
+    ]),
+    allowedAttributes: {
+      ...sanitizeHtml.defaults.allowedAttributes,
+      img: ["src", "alt", "loading", "width", "height"],
+      figure: ["class"],
     },
   });
 
