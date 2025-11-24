@@ -18,8 +18,8 @@ export default defineConfig({
         "build-placeholder",
       dataset: import.meta.env.PUBLIC_TORUS_BLOG_SANITY_DATASET || "production",
       useCdn: false,
-      // Studio is disabled for production builds
-      // Use dev server to access /admin
+      // Studio available at /admin in dev mode only
+      studioBasePath: "/admin",
     }),
     react(),
     sitemap({
