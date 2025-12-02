@@ -1,5 +1,8 @@
+export const prerender = true;
+
 import type { APIRoute } from "astro";
-import { getCollection, type CollectionEntry } from "astro:content";
+import { type CollectionEntry } from "astro:content";
+import { getAllPosts } from "@/utils/getAllPosts";
 import { getPath } from "@/utils/getPath";
 import { generateOgImageForPost } from "@/utils/generateOgImages";
 import { SITE } from "@/config";
@@ -9,7 +12,7 @@ export async function getStaticPaths() {
     return [];
   }
 
-  const posts = await getCollection("blog").then(p =>
+  const posts = await getAllPosts().then(p =>
     p.filter(({ data }) => !data.draft && !data.ogImage)
   );
 

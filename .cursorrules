@@ -1,0 +1,165 @@
+# Torus Blog - Cursor Rules
+
+## Language and Documentation
+
+- **All code, comments, and documentation must be written in English**
+- Variable names, function names, and file names should use English terminology
+- Code comments should be clear, concise, and in English
+- Commit messages should be in English
+
+## Code Style and Standards
+
+### TypeScript/JavaScript
+
+- Use TypeScript for type safety
+- Follow ESLint configuration defined in `eslint.config.js`
+- Use Prettier for code formatting (config in `.prettierrc.mjs`)
+- No `console.log` statements in production code (use proper logging)
+- **Always prefer immutability:**
+  - Use `const` instead of `let` whenever possible
+  - Avoid variable reassignment
+  - Use functional patterns: `.map()`, `.filter()`, `.reduce()` instead of loops with mutations
+  - Use spread operators `[...array]`, `{...object}` instead of mutating methods
+  - Prefer promise chaining (`.then()/.catch()`) over try/catch with mutable variables
+- Use explicit types instead of `any` - prefer union types or proper interfaces
+- Use `@ts-expect-error` instead of `@ts-ignore` with explanatory comments
+
+### File Organization
+
+- Component files should be in PascalCase (e.g., `Header.astro`)
+- Utility files should be in camelCase (e.g., `getAllPosts.ts`)
+- Keep components modular and focused on single responsibility
+- Group related utilities in appropriate directories
+
+### Astro Specific
+
+- Use Astro's content collections for blog posts (`src/data/blog/`)
+- Support both Markdown posts and Sanity CMS posts
+- Use `getCollection()` for markdown, `getSanityPosts()` for CMS content
+- Always use `getAllPosts()` utility when fetching all blog posts
+- Properly handle both content types in layouts and pages
+
+### Sanity CMS
+
+- Schema definitions in `schemaTypes/` directory
+- Use `@sanity/astro` integration for Studio at `/admin` route
+- Convert Portable Text to HTML using `@portabletext/to-html`
+- Sanity posts are identified by absence of `filePath` property
+
+### Styling
+
+- Use Tailwind CSS utility classes
+- Follow existing design patterns for consistency
+- Maintain responsive design principles
+- Use CSS variables for theme colors (defined in config)
+
+## Git Workflow
+
+### Commit Message Conventions
+
+**ALWAYS use conventional commits format:**
+
+```
+<type>: <subject>
+
+[optional body]
+```
+
+**Types:**
+- `feat`: New feature
+- `fix`: Bug fix
+- `docs`: Documentation changes
+- `style`: Code style changes (formatting, semicolons, etc)
+- `refactor`: Code refactoring
+- `perf`: Performance improvements
+- `test`: Adding or updating tests
+- `chore`: Maintenance tasks, tooling, dependencies
+
+**Rules:**
+- Subject in lowercase, no period at the end
+- Keep subject under 72 characters
+- Use imperative mood ("add" not "added" or "adds")
+- Body is optional but recommended for complex changes
+- **NEVER include Claude signatures or credits**
+- **NO "🤖 Generated with Claude Code"**
+- **NO "Co-Authored-By: Claude"**
+
+**Examples:**
+```bash
+✅ Good:
+feat: integrate sanity cms with admin interface
+fix: resolve markdown rendering in sanity posts
+docs: update readme with setup instructions
+chore: add justfile for command shortcuts
+
+❌ Bad:
+Added new feature
+Fix bug
+Update docs
+🤖 Generated with Claude Code
+```
+
+### Commit Workflow
+
+- Write clear, descriptive commit messages in English
+- Keep commits focused and atomic (one logical change per commit)
+- Group related changes by context
+- Test locally before committing
+- Run `just check` (or `pnpm run lint && pnpm run format`) before commits
+- Never commit work-in-progress or broken code to main branch
+
+## Testing and Quality
+
+- Run `pnpm run lint` to check for linting issues
+- Run `pnpm run format:check` to verify formatting
+- Run `pnpm run format` to auto-fix formatting issues
+- Test both markdown and Sanity posts functionality
+- Verify responsive design on multiple screen sizes
+
+## Documentation
+
+- Update documentation when adding new features
+- Keep README.md and docs/CMS.md in sync with changes
+- Document complex logic with inline comments
+- Include JSDoc comments for exported functions
+
+## Content Management
+
+- Blog posts can come from two sources:
+  1. Markdown files in `src/data/blog/`
+  2. Sanity CMS via `/admin` interface
+- Both sources should be treated equally in listings and routing
+- Maintain consistent schema between markdown frontmatter and Sanity schema
+
+## Performance
+
+- Optimize images and assets
+- Use Astro's static site generation capabilities
+- Minimize client-side JavaScript
+- Leverage content collections for efficient data fetching
+
+## Accessibility
+
+- Use semantic HTML elements
+- Include proper ARIA labels where needed
+- Ensure keyboard navigation works properly
+- Maintain sufficient color contrast
+
+## Environment Variables
+
+**Naming Convention:**
+- **ALL environment variables MUST use the project prefix: `TORUS_BLOG_`**
+- Format: `PUBLIC_TORUS_BLOG_<SERVICE>_<VARIABLE>`
+- Examples:
+  - `PUBLIC_TORUS_BLOG_SANITY_PROJECT_ID`
+  - `PUBLIC_TORUS_BLOG_SANITY_DATASET`
+  - `TORUS_BLOG_SANITY_API_TOKEN`
+  - `PUBLIC_TORUS_BLOG_GOOGLE_ANALYTICS_ID`
+
+**Rules:**
+- Store sensitive data in `.env` (git ignored)
+- Document required env vars in `.env.example`
+- Use `PUBLIC_` prefix for client-side accessible variables
+- Never commit actual API keys or tokens
+- Never use hardcoded fallback values in configuration files
+- Always use the project prefix to avoid conflicts with other projects

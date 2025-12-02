@@ -1,5 +1,6 @@
 ---
-import { getCollection } from "astro:content";
+export const prerender = true;
+
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
@@ -7,10 +8,12 @@ import LinkButton from "@/components/LinkButton.astro";
 import Card from "@/components/Card.astro";
 import Hr from "@/components/Hr.astro";
 import getSortedPosts from "@/utils/getSortedPosts";
+import { getAllPosts } from "@/utils/getAllPosts";
 import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
 import { SITE } from "@/config";
 
-const posts = await getCollection("blog");
+const allPosts = await getAllPosts();
+const posts = allPosts.filter(({ data }) => !data.draft);
 
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);

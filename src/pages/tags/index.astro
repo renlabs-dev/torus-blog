@@ -1,16 +1,19 @@
 ---
-import { getCollection } from "astro:content";
+export const prerender = true;
+
 import Main from "@/layouts/Main.astro";
 import Layout from "@/layouts/Layout.astro";
 import Tag from "@/components/Tag.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import getUniqueTags from "@/utils/getUniqueTags";
+import { getAllPosts } from "@/utils/getAllPosts";
 import { SITE } from "@/config";
 
-const posts = await getCollection("blog");
+const allPosts = await getAllPosts();
+const posts = allPosts.filter(({ data }) => !data.draft);
 
-let tags = getUniqueTags(posts);
+const tags = getUniqueTags(posts);
 ---
 
 <Layout title={`Tags | ${SITE.title}`}>

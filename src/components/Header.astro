@@ -40,8 +40,8 @@ const isActive = (path: string) => {
       id="top-nav-wrap"
       class="relative flex w-full items-start justify-between bg-background p-4 sm:items-center"
     >
-      <a href="/">
-        <Logo class="h-9 w-9" title="Torus Blog" />
+      <a href="/" aria-label="Torus Blog">
+        <Logo class="h-9 w-9" />
       </a>
       <nav
         id="nav-menu"
@@ -106,7 +106,7 @@ const isActive = (path: string) => {
               ariaLabel="search"
               title="Search"
             >
-              <IconSearch size="20" />
+              <IconSearch class="size-5" />
               <span class="sr-only">Search</span>
             </LinkButton>
           </li>

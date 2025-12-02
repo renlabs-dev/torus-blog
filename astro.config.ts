@@ -3,12 +3,29 @@ import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
+import sanity from "@sanity/astro";
+import react from "@astrojs/react";
+import node from "@astrojs/node";
 import { SITE } from "./src/config";
 
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
+  output: "server",
+  adapter: node({
+    mode: "standalone",
+  }),
   integrations: [
+    sanity({
+      projectId:
+        import.meta.env.PUBLIC_TORUS_BLOG_SANITY_PROJECT_ID ||
+        "build-placeholder",
+      dataset: import.meta.env.PUBLIC_TORUS_BLOG_SANITY_DATASET || "production",
+      useCdn: false,
+      // Studio path (avoids common bot targets like /admin)
+      studioBasePath: "/studio",
+    }),
+    react(),
     sitemap({
       filter: page => SITE.showArchives || !page.endsWith("/archives"),
     }),
@@ -22,19 +39,26 @@ export default defineConfig({
     },
   },
   vite: {
+    // @ts-expect-error - Tailwind CSS Vite plugin type compatibility issue
     plugins: [tailwindcss()],
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"],
+    },
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            // Split Sanity Studio into separate chunk to reduce main bundle
+            "sanity-studio": ["sanity"],
+          },
+        },
+      },
+      chunkSizeWarningLimit: 1000,
     },
   },
   image: {
     // Used for all Markdown images; not configurable per-image
     // Used for all `<Image />` and `<Picture />` components unless overridden with a prop
-    experimentalLayout: "responsive",
-  },
-  experimental: {
-    svg: true,
-    responsiveImages: true,
-    preserveScriptOrder: true,
+    layout: "constrained",
   },
 });

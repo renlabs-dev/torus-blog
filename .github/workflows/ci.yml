@@ -44,4 +44,8 @@ jobs:
         run: pnpm run format:check
 
       - name: "🚀 Build the project"
+        env:
+          PUBLIC_TORUS_BLOG_SANITY_PROJECT_ID: ${{ secrets.PUBLIC_TORUS_BLOG_SANITY_PROJECT_ID }}
+          PUBLIC_TORUS_BLOG_SANITY_DATASET: ${{ secrets.PUBLIC_TORUS_BLOG_SANITY_DATASET }}
+          TORUS_BLOG_SANITY_API_TOKEN: ${{ secrets.TORUS_BLOG_SANITY_API_TOKEN }}
         run: pnpm run build

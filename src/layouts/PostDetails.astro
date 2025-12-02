@@ -33,7 +33,18 @@ const {
   hideEditPost,
 } = post.data;
 
-const { Content } = await render(post);
+// Check if it's a Sanity post (has no filePath)
+const isSanityPost = !post.filePath;
+let Content;
+let htmlContent = "";
+
+if (isSanityPost) {
+  // For Sanity posts, use body directly as HTML
+  htmlContent = post.body || "";
+} else {
+  // For markdown posts, use Astro's recommended destructuring pattern
+  ({ Content } = await render(post));
+}
 
 let ogImageUrl: string | undefined;
 
@@ -106,16 +117,22 @@ const nextPost =
       <EditPost class="max-sm:hidden" {hideEditPost} {post} />
     </div>
     <article id="article" class="mx-auto prose mt-8 max-w-3xl">
-      <Content />
+      {isSanityPost ? <div set:html={htmlContent} /> : Content && <Content />}
     </article>
 
     <hr class="my-8 border-dashed" />
 
     <EditPost class="sm:hidden" {hideEditPost} {post} />
 
-    <ul class="mt-4 mb-8 sm:my-8">
-      {tags.map(tag => <Tag tag={slugifyStr(tag)} tagName={tag} />)}
-    </ul>
+    {
+      tags && tags.length > 0 ? (
+        <ul class="mt-4 mb-8 sm:my-8">
+          {tags.map(tag => (
+            <Tag tag={slugifyStr(tag)} tagName={tag} />
+          ))}
+        </ul>
+      ) : null
+    }
 
     <div
       class="flex flex-col items-center justify-between gap-6 sm:flex-row sm:items-end sm:gap-4"
