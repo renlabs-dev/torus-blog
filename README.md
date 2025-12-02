@@ -48,7 +48,7 @@ This blog supports two ways to create content:
 
 1. **Sanity CMS** (Recommended for content creators)
 
-   - Access at `/admin` route (e.g., `http://localhost:4321/admin`)
+   - Access at `/studio` route (e.g., `http://localhost:4321/studio`)
    - User-friendly visual editor
    - No coding required
    - See [docs/CMS.md](./docs/CMS.md) for detailed instructions
