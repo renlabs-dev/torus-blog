@@ -1,4 +1,4 @@
-# Base stage for building the static files
+# Build stage
 FROM node:lts AS base
 WORKDIR /app
 
@@ -22,7 +22,10 @@ ENV TORUS_BLOG_SANITY_API_TOKEN=$TORUS_BLOG_SANITY_API_TOKEN
 
 RUN pnpm run build
 
-# Runtime stage for serving the application
-FROM nginx:mainline-alpine-slim AS runtime
-COPY --from=base /app/dist /usr/share/nginx/html
-EXPOSE 80
+# Runtime stage for Node.js server
+FROM node:lts-alpine AS runtime
+WORKDIR /app
+COPY --from=base /app/dist ./dist
+COPY --from=base /app/node_modules ./node_modules
+EXPOSE 3000
+CMD ["node", "./dist/server/entry.mjs"]
