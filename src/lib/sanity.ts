@@ -64,6 +64,7 @@ function getClient(): ReturnType<typeof createClient> {
       apiVersion: SANITY_CONFIG.apiVersion,
       useCdn: SANITY_CONFIG.useCdn,
       token: SANITY_CONFIG.token,
+      perspective: "published",
     });
   }
 
@@ -76,7 +77,7 @@ export async function getSanityPosts(): Promise<SanityBlogPost[]> {
     return [];
   }
 
-  const query = groq`*[_type == "blogPost" && draft != true] | order(pubDatetime desc) {
+  const query = groq`*[_type == "blogPost"] | order(pubDatetime desc) {
     _id,
     _type,
     title,
@@ -111,7 +112,7 @@ export async function getSanityPostBySlug(
     return null;
   }
 
-  const query = groq`*[_type == "blogPost" && slug.current == $slug && draft != true][0] {
+  const query = groq`*[_type == "blogPost" && slug.current == $slug][0] {
     _id,
     _type,
     title,
