@@ -153,11 +153,6 @@ Both methods create posts that appear together on the blog seamlessly.
 - Still accessible via direct URL
 - **Default:** OFF
 
-#### Hide Edit Post Button
-- Toggle **ON** to hide "Suggest Changes" link
-- Useful if you don't want readers suggesting edits
-- **Default:** OFF (button shown)
-
 #### OG Image
 - Custom image for social media sharing (Twitter, Facebook, etc.)
 - **Recommended size:** 1200x630 pixels
@@ -205,7 +200,6 @@ Both methods create posts that appear together on the blog seamlessly.
 | **unlisted** | Boolean | No | Hide from listings (default: false) |
 | **ogImage** | Image | No | Social sharing preview image |
 | **canonicalURL** | URL | No | Original source URL |
-| **hideEditPost** | Boolean | No | Hide edit button (default: false) |
 
 ---
 

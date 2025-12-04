@@ -30,7 +30,6 @@ const {
   pubDatetime,
   modDatetime,
   tags,
-  hideEditPost,
 } = post.data;
 
 // Check if it's a Sanity post (has no filePath)
@@ -114,7 +113,7 @@ const nextPost =
         size="lg"
         class="my-2"
       />
-      <EditPost class="max-sm:hidden" {hideEditPost} {post} />
+      <EditPost class="max-sm:hidden" {post} />
     </div>
     <article id="article" class="mx-auto prose mt-8 max-w-3xl">
       {isSanityPost ? <div set:html={htmlContent} /> : Content && <Content />}
@@ -122,7 +121,7 @@ const nextPost =
 
     <hr class="my-8 border-dashed" />
 
-    <EditPost class="sm:hidden" {hideEditPost} {post} />
+    <EditPost class="sm:hidden" {post} />
 
     {
       tags && tags.length > 0 ? (

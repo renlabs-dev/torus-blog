@@ -125,13 +125,6 @@ export const blogPost = defineType({
       type: "url",
       description: "If this post was published elsewhere first",
     }),
-    defineField({
-      name: "hideEditPost",
-      title: "Hide Edit Post Button",
-      type: "boolean",
-      initialValue: false,
-      description: "Hide the 'Suggest Changes' button on this post",
-    }),
   ],
   preview: {
     select: {

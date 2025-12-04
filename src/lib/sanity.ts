@@ -20,7 +20,6 @@ export interface SanityBlogPost {
   content: PortableTextBlock[];
   ogImage?: ImageAsset;
   canonicalURL?: string;
-  hideEditPost?: boolean;
 }
 
 /**
@@ -92,8 +91,7 @@ export async function getSanityPosts(): Promise<SanityBlogPost[]> {
     description,
     content,
     ogImage,
-    canonicalURL,
-    hideEditPost
+    canonicalURL
   }`;
 
   try {
@@ -128,8 +126,7 @@ export async function getSanityPostBySlug(
     description,
     content,
     ogImage,
-    canonicalURL,
-    hideEditPost
+    canonicalURL
   }`;
 
   try {
