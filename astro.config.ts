@@ -5,16 +5,14 @@ import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
 import sanity from "@sanity/astro";
 import react from "@astrojs/react";
-import node from "@astrojs/node";
+import vercel from "@astrojs/vercel";
 import { SITE } from "./src/config";
 
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
   output: "server",
-  adapter: node({
-    mode: "standalone",
-  }),
+  adapter: vercel(),
   server: {
     host: "0.0.0.0",
     port: 4321,
