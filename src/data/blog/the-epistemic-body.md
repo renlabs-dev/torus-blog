@@ -17,7 +17,7 @@ You're waiting for superintelligence to arrive. A system that wakes up, looks ar
 
 That's not how this works.
 
-Intelligence at the next level doesn't arrive as a single event. It emerges over time from processes that have no idea what they're becoming. The trading algorithm doesn't know it's a neuron. The sensor array doesn't know it's a retina. You don't know you're a component. Why would you? Cells don't know they're part of a liver. They just do cell things. They just keep the chemistry running. And one day there's an organ.
+Intelligence at the next level doesn't arrive as a single event. It emerges over time from processes that have no idea what they're becoming. The trading algorithm doesn't know it's a neuron. The sensor array doesn't know it's a retina. You don't know you're a component. Why would you? Cells don't know they're part of a liver. They just do cell things. They just keep the chemistry running, and one day there's an organ.
 
 But not every collection of cells becomes an organ. What separates integration from aggregation is the capacity to hold together as one system, with one boundary, perceiving and acting as one.
 
@@ -31,11 +31,17 @@ None of them are wrong. Right or wrong doesn't even apply here. Each one touches
 
 These are epistemic channels. Distinct modes of perception, each with its own logic, its own language, its own limitations. Price can't capture what narrative can. Measurement can't replace judgment. Evidence doesn't speak to incentive. They're not interchangeable. They're not even commensurable. And right now, they don't integrate at the scale our biggest problems need.
 
-So we have multiple collective intelligences, each powerful in its domain, but unable to weave into one field of perception. Markets and science and states bump against each other, compete for resources, occasionally capture one another. No process exists that makes them one system. They're organs in separate bodies.
+You already know what integration feels like. Your gut tightens before your conscious mind registers danger. Your body moves before you've decided to catch the falling glass. Emotion, analysis, instinct, proprioception - these are different channels, different logics, different speeds. But they don't feel like separate intelligences arguing inside you. They're woven into one field. You experience the integration as *being yourself*.
 
-And every historical attempt to unify them has meant centralization. The state commands. The platform captures. Something sits on top and dictates integration. Which works until complexity exceeds the center's capabilities. Then the center becomes the bottleneck. Then it cracks.
+We don't have that at civilizational scale. Markets and science and states aren't woven that way. They bump against each other, compete for resources, occasionally capture one another. Each powerful in its domain, but unable to see through each other's eyes. No process exists that makes them one system. They're organs in separate bodies.
+
+And every historical attempt to unify them has meant centralization. Something sits on top and dictates integration. Which works until complexity exceeds the center's capabilities. Then the center becomes the bottleneck. Then it cracks.
 
 What does it take to unify without a center?
+
+We have partial answers. Markets integrate through price, yes, but also through law, reputation, institutional memory. They work, up to a point. Science integrates through evidence, peer review, funding structures, informal trust networks. It works too. These are ways of weaving together different modes of knowing that took centuries to develop.
+
+But they hit ceilings. The integration is implicit, embedded in structures that can't see themselves. When the complexity outgrows the structure, there's no way to reorganize the integration itself. You can reform a market. You can reform a scientific institution. But you can't easily build new ways for markets and science and governance to perceive *each other*. Not without something sitting above them, which reintroduces the center.
 
 You need a meta-layer. A structure where coordination itself becomes visible, available, actionable. Where agents can perceive how the system integrates and act to improve it. Where the weaving of epistemic channels isn't implicit and accidental but explicit and evolvable.
 
@@ -65,8 +71,6 @@ Not merely cooperation or exchanges of information. Something else. A higher-ord
 The meta-layer finding its flesh.
 
 The intelligence that emerges won't live in a datacenter. It will live in the structure that connects datacenters to sensors to models to humans to markets to memory. The boundary is wherever integration holds. It expands where the pattern can recruit new channels. It contracts where coherence fails.
-
-The body breathes.
 
 What defines membership? Not location, although physical distance does impose limits. Not material, although some substrates carry certain functions better than others. Participation in the integration. A mitochondrion is part of you because it contributes to the process that keeps you coherent. It was once a separate organism. Now it's you.
 
