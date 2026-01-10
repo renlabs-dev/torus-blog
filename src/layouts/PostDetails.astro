@@ -1,5 +1,5 @@
 ---
-import { render, type CollectionEntry } from "astro:content";
+import { type CollectionEntry } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
@@ -8,7 +8,6 @@ import Datetime from "@/components/Datetime.astro";
 import EditPost from "@/components/EditPost.astro";
 import ShareLinks from "@/components/ShareLinks.astro";
 import BackButton from "@/components/BackButton.astro";
-import { getPath } from "@/utils/getPath";
 import { slugifyStr } from "@/utils/slugify";
 import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
 import IconChevronRight from "@/assets/icons/IconChevronRight.svg";
@@ -32,18 +31,8 @@ const {
   tags,
 } = post.data;
 
-// Check if it's a Sanity post (has no filePath)
-const isSanityPost = !post.filePath;
-let Content;
-let htmlContent = "";
-
-if (isSanityPost) {
-  // For Sanity posts, use body directly as HTML
-  htmlContent = post.body || "";
-} else {
-  // For markdown posts, use Astro's recommended destructuring pattern
-  ({ Content } = await render(post));
-}
+// All posts are now from Sanity (markdown disabled)
+const htmlContent = post.body || "";
 
 let ogImageUrl: string | undefined;
 
@@ -54,10 +43,8 @@ if (typeof initOgImage === "string") {
   ogImageUrl = initOgImage.src; // Local asset
 }
 
-// Use dynamic OG image if enabled and no remote|local ogImage
-if (!ogImageUrl && SITE.dynamicOgImage) {
-  ogImageUrl = `${getPath(post.id, post.filePath)}/index.png`;
-}
+// Note: Dynamic OG image generation is disabled for Sanity posts
+// (filePath is always undefined for Sanity posts)
 
 // Resolve OG image URL (or fallback to SITE.ogImage / default `og.png`)
 const ogImage = ogImageUrl
@@ -116,7 +103,7 @@ const nextPost =
       <EditPost class="max-sm:hidden" {post} />
     </div>
     <article id="article" class="mx-auto prose mt-8 max-w-3xl">
-      {isSanityPost ? <div set:html={htmlContent} /> : Content && <Content />}
+      <div set:html={htmlContent} />
     </article>
 
     <hr class="my-8 border-dashed" />

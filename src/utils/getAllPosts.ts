@@ -1,4 +1,4 @@
-import { getCollection, type CollectionEntry } from "astro:content";
+import { type CollectionEntry } from "astro:content";
 import { getSanityPosts, type SanityBlogPost } from "@/lib/sanity";
 import { toHTML, escapeHTML } from "@portabletext/to-html";
 import sanitizeHtml from "sanitize-html";
@@ -115,24 +115,18 @@ function sanityPostToCollectionEntry(
 }
 
 /**
- * Returns all posts: local markdown + Sanity CMS
+ * Returns all posts from Sanity CMS (markdown disabled)
  */
 export async function getAllPosts(): Promise<CollectionEntry<"blog">[]> {
-  // Fetch markdown posts
-  const markdownPosts = await getCollection("blog");
-
   // Fetch Sanity posts (immutable approach with promise handling)
   const sanityPosts = await getSanityPosts()
     .then(sanityData => sanityData.map(sanityPostToCollectionEntry))
     .catch(error => {
       // eslint-disable-next-line no-console -- Production error logging for diagnosing Sanity issues
-      console.error(
-        "Failed to fetch Sanity posts, serving markdown-only content:",
-        error
-      );
+      console.error("Failed to fetch Sanity posts:", error);
       return [] as CollectionEntry<"blog">[];
     });
 
-  // Combine and return all posts
-  return [...markdownPosts, ...sanityPosts];
+  // Return Sanity posts only
+  return sanityPosts;
 }
