@@ -57,23 +57,21 @@ interface SanityCodeBlock extends SanityBlockBase {
 
 interface SanityImageBlock extends SanityBlockBase {
   readonly _type: 'image';
-  readonly alt: string;
-  readonly asset?: {
+  readonly asset: {
     readonly _type: 'reference';
     readonly _ref: string;
   };
-  readonly url?: string;
+  readonly alt: string;
 }
 
 type SanityBlock = SanityTextBlock | SanityCodeBlock | SanityImageBlock;
 
 interface SanityAsset {
   readonly _type: 'image';
-  readonly asset?: {
+  readonly asset: {
     readonly _type: 'reference';
     readonly _ref: string;
   };
-  readonly url?: string;
 }
 
 interface SanityBlogPost {
@@ -342,8 +340,11 @@ const createImageBlock = async (client: SanityClient, alt: string, imagePath: st
     {
       _key: generateKey(),
       _type: 'image',
+      asset: {
+        _type: 'reference',
+        _ref: uploadedImage.assetId,
+      },
       alt,
-      url: uploadedImage.url,
     },
   ];
 };
@@ -457,7 +458,7 @@ const buildImageUrl = (projectId: string, dataset: string, assetId: string): str
   return `https://cdn.sanity.io/images/${projectId}/${dataset}/${assetId}`;
 };
 
-const uploadImageAsset = async (client: SanityClient, imagePath: string): Promise<{ url: string } | null> => {
+const uploadImageAsset = async (client: SanityClient, imagePath: string): Promise<{ assetId: string } | null> => {
   if (!imagePath) return null;
 
   const actualPath = imagePath.replace('@/assets', 'src/assets');
@@ -475,9 +476,9 @@ const uploadImageAsset = async (client: SanityClient, imagePath: string): Promis
     const asset = await client.assets.upload('image', fileBuffer, { filename });
     const publicUrl = buildImageUrl(CONFIG.projectId, CONFIG.dataset, asset._id);
     console.log(`✅ Uploaded: ${filename}`);
-    console.log(`   URL: ${publicUrl}`);
+    console.log(`   Asset ID: ${asset._id}`);
 
-    return { url: publicUrl };
+    return { assetId: asset._id };
   } catch (error) {
     console.error(`❌ Error uploading ${imagePath}: ${(error as Error).message}`);
     return null;
@@ -524,7 +525,16 @@ const migrateSinglePost = async (filename: string): Promise<MigrationResult> => 
     const content = await markdownToPortableText(client, post.body);
 
     console.log('🖼️  Uploading cover image...');
-    const ogImage = await uploadImageAsset(client, post.frontmatter.ogImage ?? '');
+    const uploadedOgImage = await uploadImageAsset(client, post.frontmatter.ogImage ?? '');
+    const ogImage = uploadedOgImage
+      ? {
+          _type: 'image' as const,
+          asset: {
+            _type: 'reference' as const,
+            _ref: uploadedOgImage.assetId,
+          },
+        }
+      : null;
 
     console.log('💾 Creating Sanity document...');
     const document = buildSanityDocument(post.frontmatter, post.slug, content, ogImage);
