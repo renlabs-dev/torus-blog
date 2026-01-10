@@ -58,20 +58,22 @@ interface SanityCodeBlock extends SanityBlockBase {
 interface SanityImageBlock extends SanityBlockBase {
   readonly _type: 'image';
   readonly alt: string;
-  readonly asset: {
+  readonly asset?: {
     readonly _type: 'reference';
     readonly _ref: string;
   };
+  readonly url?: string;
 }
 
 type SanityBlock = SanityTextBlock | SanityCodeBlock | SanityImageBlock;
 
 interface SanityAsset {
   readonly _type: 'image';
-  readonly asset: {
+  readonly asset?: {
     readonly _type: 'reference';
     readonly _ref: string;
   };
+  readonly url?: string;
 }
 
 interface SanityBlogPost {
@@ -321,9 +323,9 @@ const createCodeBlock = (code: string, language: string): SanityCodeBlock => ({
 });
 
 const createImageBlock = async (client: SanityClient, alt: string, imagePath: string): Promise<readonly SanityBlock[]> => {
-  const uploadedAsset = await uploadImageAsset(client, imagePath);
+  const uploadedImage = await uploadImageAsset(client, imagePath);
 
-  if (!uploadedAsset) {
+  if (!uploadedImage) {
     console.warn(`⚠️  Failed to upload image: ${imagePath} - skipping`);
     return [
       {
@@ -341,7 +343,7 @@ const createImageBlock = async (client: SanityClient, alt: string, imagePath: st
       _key: generateKey(),
       _type: 'image',
       alt,
-      asset: uploadedAsset.asset,
+      url: uploadedImage.url,
     },
   ];
 };
@@ -451,7 +453,11 @@ const markdownToPortableText = async (client: SanityClient, markdown: string): P
 // Image Upload
 // ============================================================================
 
-const uploadImageAsset = async (client: SanityClient, imagePath: string): Promise<SanityAsset | null> => {
+const buildImageUrl = (projectId: string, dataset: string, assetId: string): string => {
+  return `https://cdn.sanity.io/images/${projectId}/${dataset}/${assetId}`;
+};
+
+const uploadImageAsset = async (client: SanityClient, imagePath: string): Promise<{ url: string } | null> => {
   if (!imagePath) return null;
 
   const actualPath = imagePath.replace('@/assets', 'src/assets');
@@ -467,9 +473,11 @@ const uploadImageAsset = async (client: SanityClient, imagePath: string): Promis
     console.log(`📤 Uploading: ${filename}`);
     const fileBuffer = fs.readFileSync(fullPath);
     const asset = await client.assets.upload('image', fileBuffer, { filename });
-    console.log(`✅ Uploaded: ${filename} (${asset._id})`);
+    const publicUrl = buildImageUrl(CONFIG.projectId, CONFIG.dataset, asset._id);
+    console.log(`✅ Uploaded: ${filename}`);
+    console.log(`   URL: ${publicUrl}`);
 
-    return { _type: 'image', asset: { _type: 'reference', _ref: asset._id } };
+    return { url: publicUrl };
   } catch (error) {
     console.error(`❌ Error uploading ${imagePath}: ${(error as Error).message}`);
     return null;
