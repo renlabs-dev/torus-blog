@@ -1,7 +1,7 @@
 ---
 title: Report on the first Swarm
 author: Renlabs
-pubDatetime: 2025-08-06T9:33:00Z
+pubDatetime: 2025-08-06T09:33:00Z
 featured: true
 draft: false
 ogImage: "@/assets/images/torus-fish.jpg"
