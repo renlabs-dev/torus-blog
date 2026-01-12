@@ -474,7 +474,6 @@ const uploadImageAsset = async (client: SanityClient, imagePath: string): Promis
     console.log(`📤 Uploading: ${filename}`);
     const fileBuffer = fs.readFileSync(fullPath);
     const asset = await client.assets.upload('image', fileBuffer, { filename });
-    const publicUrl = buildImageUrl(CONFIG.projectId, CONFIG.dataset, asset._id);
     console.log(`✅ Uploaded: ${filename}`);
     console.log(`   Asset ID: ${asset._id}`);
 
@@ -565,7 +564,7 @@ const migrateAllPosts = async (): Promise<void> => {
 
   if (failed.length > 0) {
     console.log(`❌ Failed: ${failed.length}`);
-    failed.forEach((f, i) => console.log(`   ${posts[results.indexOf(f)]}: ${f.error}`));
+    failed.forEach((f) => console.log(`   ${posts[results.indexOf(f)]}: ${f.error}`));
   }
 };
 
