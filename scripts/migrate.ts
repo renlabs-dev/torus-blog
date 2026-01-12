@@ -454,10 +454,6 @@ const markdownToPortableText = async (client: SanityClient, markdown: string): P
 // Image Upload
 // ============================================================================
 
-const buildImageUrl = (projectId: string, dataset: string, assetId: string): string => {
-  return `https://cdn.sanity.io/images/${projectId}/${dataset}/${assetId}`;
-};
-
 const uploadImageAsset = async (client: SanityClient, imagePath: string): Promise<{ assetId: string } | null> => {
   if (!imagePath) return null;
 
