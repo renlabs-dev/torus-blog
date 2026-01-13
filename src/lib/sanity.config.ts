@@ -14,7 +14,7 @@ export const SANITY_CONFIG = {
   projectId: import.meta.env.PUBLIC_TORUS_BLOG_SANITY_PROJECT_ID,
   dataset: import.meta.env.PUBLIC_TORUS_BLOG_SANITY_DATASET,
   apiVersion: "2024-01-01",
-  useCdn: false,
+  useCdn: true,
   token: import.meta.env.TORUS_BLOG_SANITY_API_TOKEN,
   studioBasePath: "/studio",
 } as const;
