@@ -34,21 +34,39 @@ Both methods create posts that appear together on the blog seamlessly.
 
 ## Accessing Sanity CMS
 
-### Development Environment
+### What is Sanity CMS?
 
-1. **Start the development server:**
-   ```bash
-   pnpm run dev
-   ```
+Sanity is a modern, open-source headless CMS that allows content creators to manage blog posts through a visual, user-friendly interface. Unlike traditional CMS platforms, Sanity provides a flexible editor with real-time collaboration, rich content formatting, and API-first architecture.
 
-2. **Open Sanity Studio:**
-   - Navigate to: `http://localhost:4321/studio`
-   - Sign in with your Sanity account credentials
+### Sign In
 
-### Production Environment
+First, you need to log in with your Sanity account credentials:
 
-- Access at: `https://yourdomain.com/studio`
-- Requires authentication with a Sanity account that has project access
+**[Click here to sign in to Sanity](https://www.sanity.io/login?type=token&origin=https%3A%2F%2Fwww.sanity.io%2Fapi%2Fdashboard%2Fauthenticate%3FredirectTo%3D%252Fwelcome%253Fref%253Dnavbar)**
+
+### Access Sanity Studio
+
+After signing in, you can access the studio environments:
+
+**Production Environment:**
+- Access at: [https://www.sanity.io/@oXwUdOu4G/studio/u3alw10wiw1vp5ppsf963mn9/default](https://www.sanity.io/@oXwUdOu4G/studio/u3alw10wiw1vp5ppsf963mn9/default)
+- Use this for creating and publishing live posts
+
+**Development Environment:**
+- Access at: [https://www.sanity.io/@oXwUdOu4G/studio/b52kakns02jpetbxtmdrl3so/default](https://www.sanity.io/@oXwUdOu4G/studio/b52kakns02jpetbxtmdrl3so/default)
+- Use this for testing and development purposes
+
+### No Access? Request Permission
+
+If you don't have access to view or edit posts in Sanity Studio, you need to be added to the project whitelist.
+
+**Contact one of the team members below to request access:**
+
+- **@kingu**
+- **@ed**
+- **@rodrigooler**
+
+You'll need to provide your email address to be added to the whitelist. Once approved, you'll be able to create, edit, and manage blog posts.
 
 ---
 
